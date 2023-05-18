@@ -1,0 +1,27 @@
+
+
+// layout 
+@mixin position(
+  $p: absolute, 
+  $t: null, 
+  $b: null, 
+  $l: null,
+  $r: null,
+  $index: null
+){
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  z-index: $index;
+}
+
+.model{
+  @include position(fixed, $t: 0, $l: 0, $index: 100);
+  .dim {
+    @include position($t: 50%, $l: 50%, $index: 80); 
+    background-color: rgba(0,0,0,0.5);
+
+  }
+} 
