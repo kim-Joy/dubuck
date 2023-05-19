@@ -33,9 +33,9 @@
       &.paint_light { //배경색 다른 경우
         @include popup_btn(
           140px,
-          #f1f1f1,
-          #f1f1f1,
-          #686868
+          $gray_f1,
+          $gray_f1,
+          $gray_68
         );
       }
       &.grape { //버튼색이 파란색인 경우
@@ -44,16 +44,16 @@
         &.paint {
           @include popup_btn(
           100px,
-          #6558f5,
-          #6558f5,
+          $grape,
+          $grape,
           #fff
         );
         }
         &.paint_light {
           @include popup_btn(
           100px,
-          rgba(101,88,245,0.35),
-          rgba(101,88,245,0.35),
+          $grape_light,
+          $grape_light,
           #fff
         );
         }
@@ -74,7 +74,7 @@
             140px,
             #fff,
             #fff,
-            #3F34C0
+            $grape_deep
           );
         }
       }
