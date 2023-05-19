@@ -1,0 +1,173 @@
+/* 버튼 그룹 
+================================ */
+.btn_group{
+  //한줄에 버튼 한개
+  &.horzion {margin-top: 40px; 
+    button + button {
+      margin-top: 8px;
+    }
+  }
+  //한줄에 버튼 두개 
+  &.vertical {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  
+    //btn small
+    .btn_small {
+      height: 40px;
+      line-height: 38px;
+      font-size: 14px;
+      font-weight: 300;
+      &.paint { //배경색 
+        @include popup_btn(
+          10px, 10px,
+          $orange,
+          $orange,
+          #fff
+        );
+      }
+      &.paint_light { //배경색 다른 경우
+        @include popup_btn(
+          140px,
+          #f1f1f1,
+          #f1f1f1,
+          #686868
+        );
+      }
+      &.grape { //버튼색이 파란색인 경우
+        font-size: 16px;
+        font-weight: 300;
+        &.paint {
+          @include popup_btn(
+            100px
+          #6558f5,
+          #6558f5,
+          #fff
+        );
+        }
+        &.paint_light {
+          @include popup_btn(
+          100px,
+          rgba(101,88,245,0.35),
+          rgba(101,88,245,0.35),
+          #fff
+        );
+        }
+      }
+      &.white {
+        height: 60px;
+        line-height: 58px;
+        &.paint_line{
+          @include popup_btn(
+            140px,
+            transparent,
+            #fff,
+            #fff
+          );
+        }
+        &.paint{
+          @include popup_btn(
+            140px,
+            #fff,
+            #fff,
+            #3F34C0
+          );
+        }
+      }
+      
+    }
+  }
+}
+
+
+/* 버튼 디자인
+================================  */
+
+/* button size */
+.btn_large {
+  display: block;
+  width: 100%; 
+  height: 60px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 58px;
+}
+.btn_xsmall {
+  padding: 0 10px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+/* button style */
+.btn_exit {
+  border-radius: 20px; 
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center; 
+  font-family: $font_kr, Arial, Helvetica, sans-serif;
+
+  &.paint {
+    background-color: $orange;
+    border-color: $orange;
+    color: #fff;
+    > .arrow {
+      background-color: #fff;
+    }
+  }
+  &.paint-line {
+    border-color: $orange;
+    color: $orange;
+    > .arrow {
+      background-color: $orange;
+    }
+  }
+  &.paint_wh {
+    background-color: #fff;
+    border-color: #fff;
+    color: $orange;
+    font-weight: 700;
+  }
+  > .arrow {
+    display: inline-block;
+    width: 16px;
+    height: 10px; 
+    margin-left: 8px; 
+    -webkit-mask-image: url($btn-exit-arrow + "arrow.svg");
+    mask-image: url($btn-exit-arrow + "arrow.svg");
+  
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-repeat: no-repeat;
+  
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-size: contain;
+  
+    -webkit-mask-position: right center;
+    mask-size: right center;
+    background-position: right center;
+  }
+}
+
+/* 배경색이 반대 일 경우 버튼 컬러 */ 
+.body_orange {
+  background-color: $orange;
+  .btn_large {
+    font-weight: 700;
+    &.paint {
+      background-color: #fff;
+      border-color: #fff;
+      color: $orange;
+    }
+    &.paint-line {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+}

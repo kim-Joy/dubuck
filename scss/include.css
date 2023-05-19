@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@import "/css/reset.css";
+@import "/css/font.css";
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.model .dim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 버튼 그룹 
+================================ */
+.btn_group.horzion {
+  margin-top: 40px;
+}
+.btn_group.horzion button + button {
+  margin-top: 8px;
+}
+.btn_group.vertical {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.btn_group.vertical .btn_small {
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.btn_group.vertical .btn_small.paint {
+  width: 140px;
+  background-color: #FA7D38;
+  border-color: #FA7D38;
+  color: #fff;
+}
+.btn_group.vertical .btn_small.paint_light {
+  width: 140px;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: #686868;
+}
+.btn_group.vertical .btn_small.grape {
+  font-size: 16px;
+  font-weight: 300;
+}
+.btn_group.vertical .btn_small.grape.paint {
+  width: 100px;
+  background-color: #6558f5;
+  border-color: #6558f5;
+  color: #fff;
+}
+.btn_group.vertical .btn_small.grape.paint_light {
+  width: 100px;
+  background-color: rgba(101, 88, 245, 0.35);
+  border-color: rgba(101, 88, 245, 0.35);
+  color: #fff;
+}
+.btn_group.vertical .btn_small.white {
+  height: 60px;
+  line-height: 58px;
+}
+.btn_group.vertical .btn_small.white.paint_line {
+  width: 142px;
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.btn_group.vertical .btn_small.white.paint {
+  width: 142px;
+  background-color: #fff;
+  border-color: #fff;
+  color: #3F34C0;
+}
+
+/* 버튼 디자인
+================================  */
+/* button size */
+.btn_large {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 58px;
+}
+
+/* button style */
+.btn_exit {
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  font-family: "KIMM", Arial, Helvetica, sans-serif;
+}
+.btn_exit.paint {
+  background-color: #FA7D38;
+  border-color: #FA7D38;
+  color: #fff;
+}
+.btn_exit.paint > .arrow {
+  background-color: #fff;
+}
+.btn_exit.paint-line {
+  border-color: #FA7D38;
+  color: #FA7D38;
+}
+.btn_exit.paint-line > .arrow {
+  background-color: #FA7D38;
+}
+.btn_exit.paint_wh {
+  background-color: #fff;
+  color: #FA7D38;
+  font-weight: 700;
+}
+.btn_exit > .arrow {
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  margin-left: 8px;
+  -webkit-mask-image: url("/assets/icon/arrow.svg");
+  mask-image: url("/assets/icon/arrow.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-size: contain;
+  -webkit-mask-position: right center;
+  -webkit-mask-size: right center;
+          mask-size: right center;
+  background-position: right center;
+}
+
+/* 배경색이 반대 일 경우 버튼 컬러 */
+.body_orange {
+  background-color: #FA7D38;
+}
+.body_orange .btn_large {
+  font-weight: 700;
+}
+.body_orange .btn_large.paint {
+  background-color: #fff;
+  border-color: #fff;
+  color: #FA7D38;
+}
+.body_orange .btn_large.paint-line {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}/*# sourceMappingURL=include.css.map */
