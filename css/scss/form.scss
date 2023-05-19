@@ -2,6 +2,7 @@
 
 input{
   &::placeholder {
+    font-family: "NanumSquare";
     color: #8A8A8A !important; opacity: 1;
   }
   &:-webkit-input-placeholder,
@@ -18,10 +19,18 @@ input{
   }
 }
 
+input[type=password]{
+	font-family:"Nanum Gothic", sans-serif !important;
+}
+input[type=password]::placeholder {
+	font-family: $font_kr; 
+}
+
+
 @mixin label {
   display: block;
   margin-bottom: 4px;
-  color: #171717;
+  color: $black;
     font: {
       size: 14px;
       weight: 300;
@@ -32,12 +41,12 @@ input{
     display: block;
     width: 100%;
     height: 50px;
-    padding: 15px; 
+    padding: 0 15px; 
     border-radius: 5px;
     border: 1px solid #E2E2E2;
     box-sizing: border-box;
     background-color: #fff;
-    color: #171717;
+    color: $black;
     font: {
       size: 14px;
       weight: 300;
@@ -69,7 +78,7 @@ input{
       width: 20px; 
       text-align: center;
       font-size: 14px;
-      color: #171717;
+      color: $black;
       font: {
         size: 26px;
       }
@@ -77,3 +86,8 @@ input{
   }
 }
   
+
+
+
+/*  check box
+================================================== */

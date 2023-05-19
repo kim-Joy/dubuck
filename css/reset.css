@@ -13,7 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video ,textarea, pre {margin: 0; padding: 0; border: 0; }
 
 ul,ol {list-style: none; }
-button {all: unset; cursor: pointer; }
+button, input {all: unset; cursor: pointer; outline: none;}
 a {text-decoration:none; color: inherit; cursor: pointer;}
 em {font-style: normal; }
 

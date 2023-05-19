@@ -1,8 +1,10 @@
 input::-moz-placeholder {
+  font-family: "NanumSquare";
   color: #8A8A8A !important;
   opacity: 1;
 }
 input::placeholder {
+  font-family: "NanumSquare";
   color: #8A8A8A !important;
   opacity: 1;
 }
@@ -26,6 +28,18 @@ input:placeholder-shown {
   text-overflow: ellipsis;
 }
 
+input[type=password] {
+  font-family: "Nanum Gothic", sans-serif !important;
+}
+
+input[type=password]::-moz-placeholder {
+  font-family: "KIMM";
+}
+
+input[type=password]::placeholder {
+  font-family: "KIMM";
+}
+
 .form_dl + .form_dl {
   margin-top: 20px;
 }
@@ -41,7 +55,7 @@ input:placeholder-shown {
   display: block;
   width: 100%;
   height: 50px;
-  padding: 15px;
+  padding: 0 15px;
   border-radius: 5px;
   border: 1px solid #E2E2E2;
   box-sizing: border-box;
@@ -64,3 +78,6 @@ input:placeholder-shown {
   color: #171717;
   font-size: 26px;
 }
+
+/*  check box
+================================================== */
