@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/scss/include.css">
+  <link rel="stylesheet" href="css/scss/include.css">
   <title>Document</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
         <button class="btn_exit btn_small  grape paint_light">Prev</button>
         <button class="btn_exit btn_small grape paint">Next</button>
       </div>
-    <section style="background-color: #3F34C0">
+    <section class="body_grape">
       <div class="btn_group vertical">
         <button class="btn_exit btn_small white paint_line">공부 끝내기</button>
         <button class="btn_exit btn_small white paint">아직 더 풀래</button>
@@ -59,31 +59,67 @@
           <input type="password" class="form_input" >
         </dd>
       </dl>
-      <div class="form_dl half">
-        <dl class="">
-          <dt>
-            <label for="email" class="form_label">성</label>
-          </dt>
-          <dd id="email">
-            <input type="text" class="form_input" placeholder="@를 제외하고 입력하세요.">
-          </dd>
-        </dl>
-        <span class="mark">/</span>
+      <div class="form_dl form_half mark">
         <dl>
           <dt>
-            <label for="email" class="form_label">이름</label>
+            <label for="first_name" class="form_label">성</label>
           </dt>
-          <dd id="email">
-            <input type="text" class="form_input" placeholder="@를 제외하고 입력하세요.">
+          <dd id="first_name">
+            <input type="text" class="form_input" placeholder="성" maxlength="10">
+          </dd>
+        </dl>
+        <span>/</span>
+        <dl>
+          <dt>
+            <label for="name" class="form_label">이름</label>
+          </dt>
+          <dd id="name">
+            <input type="text" class="form_input" placeholder="이름" maxlength="20">
           </dd>
         </dl>
       </div>
+
+      <div class="form_dl form_half mark">
+        <dl>
+          <dt>
+            <label for="email01" class="form_label">이메일</label>
+          </dt>
+          <dd id="email01">
+            <input type="text" class="form_input" placeholder="이메일">
+          </dd>
+        </dl>
+        <span>@</span>
+        <dl>
+          <dt>
+            <label for="email02" class="form_label indent">이메일</label>
+          </dt>
+          <dd id="email02">
+            <button class="select_group">
+              선택하세요.
+              <ul class="select_list">
+                <li>naver.com</li>
+                <li>hanmail.net</li>
+                <li>daum.net</li>
+                <li>kakao.com</li>
+                <li>gmail.com</li>
+                <li class="option_etc">
+                  <label for="email_input">직접입력</label>
+                </li>
+              </ul>
+            </button>
+          </dd>
+          <dd>
+          </dd>
+        </dl>
+        <input id="email_input" type="text" class="form_input" placeholder="직접 입력해주세요.">
+      </div>
+
     </section>
 
     <section>
       <div class="radio_group">
         <input type="radio" name="options" id="opt1" class="radio" checked>
-        <label for="opt1">라디오1 checked</label>
+        <label for="opt1">전체 동의</label>
     </div>
     </section>
 

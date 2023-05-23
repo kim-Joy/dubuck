@@ -9,8 +9,7 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
@@ -188,49 +187,8 @@
   color: #fff;
 }
 
-.visaullyhiden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
-
-.indent {
-  text-indent: -9999px;
-}
-
-.body_grape {
-  background-color: #3F34C0;
-}
-
-.model {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-.model .dim {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 80;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 /* input
 ================================ */
-input::-moz-placeholder {
-  font-family: "NanumSquare";
-  color: #8A8A8A !important;
-  opacity: 1;
-}
 input::placeholder {
   font-family: "NanumSquare";
   color: #8A8A8A !important;
@@ -239,18 +197,10 @@ input::placeholder {
 input:-webkit-input-placeholder, input:-ms-input-placeholder, input:-mos-input-placeholder {
   color: #8A8A8A;
 }
-input:-moz-read-only {
-  background-color: #eee !important;
-  color: #8A8A8A !important;
-  outline: none;
-}
 input:read-only, input.readonly, input:disabled, input.disabled {
   background-color: #eee !important;
   color: #8A8A8A !important;
   outline: none;
-}
-input:-moz-placeholder-shown {
-  text-overflow: ellipsis;
 }
 input:placeholder-shown {
   text-overflow: ellipsis;
@@ -258,10 +208,6 @@ input:placeholder-shown {
 
 input[type=password] {
   font-family: "Roboto", Helvetica, Arial, sans-serif !important;
-}
-
-input[type=password]::-moz-placeholder {
-  font-family: "KIMM";
 }
 
 input[type=password]::placeholder {
@@ -297,84 +243,57 @@ input[type=password]::placeholder {
 .form_dl .form_input:hover {
   border-color: #FA7D38;
 }
-
-.form_half {
+.form_dl.half {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.form_half > dl {
+.form_dl.half > dl {
   width: calc(50% - 8px);
 }
-.form_half > span {
+.form_dl.half > span {
   width: 20px;
   margin-top: 18px;
   text-align: center;
   color: #171717;
   font-size: 14px;
 }
-.form_half.mark dl {
-  width: calc((100% - 20px) / 2);
+.form_dl.half.mark dl {
+  width: calc((100% - 20px)/ 2);
 }
 
 /* select
 ================================ */
 .select_group {
   position: relative;
-  display: block;
-  width: 100%;
-  height: 50px;
-  padding: 0 15px;
-  border-radius: 5px;
-  border: 1px solid #E2E2E2;
-  box-sizing: border-box;
-  background-color: #fff;
-  color: #171717;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "KIMM";
-  font-family: "NanumSquare";
-  color: #8A8A8A;
-}
-.select_group:focus {
-  border-color: #FA7D38;
 }
 .select_group:focus > .select_list {
   display: block;
 }
 .select_group > .select_list {
-  display: none;
-  height: 164px;
-  overflow-x: none;
-  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
   width: 100%;
-  padding: 10px 15px;
+  padding: 5px;
   box-sizing: border-box;
   border: 1px solid #E2E2E2;
   border-radius: 5px;
   background-color: #fff;
-  position: absolute;
-  top: 54px;
-  left: 0;
-  z-index: 5;
 }
 .select_group > .select_list > li {
-  width: 100%;
-  height: 18px;
   margin-bottom: 10px;
   color: #171717;
   font-size: 14px;
   font-weight: 300;
   font-family: "SpaceGrotesk";
 }
-.select_group > .select_list > li:hover, .select_group > .select_list > li:focus {
+.select_group > .select_list > li:hover {
   color: #FA7D38;
-}
-
-#email_input {
-  margin-top: 4px;
 }
 
 /*  check box

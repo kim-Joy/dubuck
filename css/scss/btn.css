@@ -1,4 +1,42 @@
 @charset "UTF-8";
+@import "/css/reset.css";
+@import "/css/font.css";
+.visaullyhiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.indent {
+  text-indent: -9999px;
+}
+
+.body_grape {
+  background-color: #3F34C0;
+}
+
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.model .dim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* 버튼 그룹 
 ================================ */
 .btn_group.horzion {
@@ -128,8 +166,7 @@
   mask-size: contain;
   background-size: contain;
   -webkit-mask-position: right center;
-  -webkit-mask-size: right center;
-          mask-size: right center;
+  mask-position: right center;
   background-position: right center;
 }
 

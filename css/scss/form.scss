@@ -1,5 +1,8 @@
-@import "common";
+@import "common.scss";
+@import "layout.scss";
 
+/* input
+================================ */
 input{
   &::placeholder {
     font-family: "NanumSquare";
@@ -18,14 +21,15 @@ input{
     text-overflow: ellipsis; 
   }
 }
-
 // password 텍스트 글자 안보여서 추가
 input[type=password]{
-	font-family:"Nanum Gothic", sans-serif !important;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
 }
 input[type=password]::placeholder {
 	font-family: $font_kr; 
 }
+
+
 
 
 @mixin label {
@@ -56,6 +60,7 @@ input[type=password]::placeholder {
     
   }
 
+/* form_dl */ 
 .form_dl {
   + .form_dl {
     margin-top: 20px;
@@ -69,26 +74,93 @@ input[type=password]::placeholder {
       border-color: #FA7D38;
     }
   }
+}
 
-  &.half {
-    > dl {
-      display: flex;
+.form_half {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  > dl {
+    width: calc(50% - 8px);
+  }
+  > span {
+    width: 20px; 
+    margin-top: 18px;
+    text-align: center;
+    color: $black;
+    font: {
+      size: 14px;
     }
+  }
+  &.mark dl {
+    width: calc((100% - 20px)/ 2);
+  }
+}
 
-    > .mark {
-      width: 20px; 
-      text-align: center;
-      font-size: 14px;
-      color: $black;
-      font: {
-        size: 26px;
-      }
+
+/* select
+================================ */
+@mixin select {
+  width: 100%; 
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #E2E2E2;
+  border-radius: 5px;
+  background-color: #fff;
+
+}
+
+@mixin slect_item {
+  width: 100%; 
+  height: 18px;
+  margin-bottom: 10px;
+  color: $black;
+  font: {
+    size: 14px;
+    weight: 300;
+    family: $font_en;
+  }
+  &:hover,
+  &:focus {
+    color: $orange;
+  } 
+}
+
+.select_group {
+  position: relative;
+  @include input;
+  font-family: "NanumSquare";
+  color: #8A8A8A; 
+
+  &:focus {
+    border-color: $orange;
+    > .select_list {
+      display: block;
+    }
+  }
+  > .select_list {
+    display: none;
+    height: 164px; 
+    overflow-x: none;
+    overflow-y: auto;
+    @include select;
+    @include position(
+      absolute,
+      $t :  54px,
+      $l : 0,
+      $index : 5,
+    );
+    > li {
+      @include slect_item;
     }
   }
 }
-  
 
-
+#email_input {
+  margin-top: 4px;
+}
 
 /*  check box
-================================================== */
+================================ */

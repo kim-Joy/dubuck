@@ -15,6 +15,19 @@
   z-index: $index;
 }
 
+//팝업 버튼 스타일
+@mixin popup_btn($width, $bg, $border, $color){
+  min-width: $width;
+  background-color: $bg;
+  border-color: $border;
+  color: $color;
+}
+
+
+.body_grape {
+  background-color: $grape_deep;
+}
+
 .model{
   @include position(fixed, $t: 0, $l: 0, $index: 100);
   .dim {
