@@ -240,13 +240,13 @@ input:-webkit-input-placeholder, input:-ms-input-placeholder, input:-mos-input-p
   color: #8A8A8A;
 }
 input:-moz-read-only {
-  background-color: #eee !important;
-  color: #8A8A8A !important;
+  background-color: #f1f1f1 !important;
+  color: #686868 !important;
   outline: none;
 }
 input:read-only, input.readonly, input:disabled, input.disabled {
-  background-color: #eee !important;
-  color: #8A8A8A !important;
+  background-color: #f1f1f1 !important;
+  color: #686868 !important;
   outline: none;
 }
 input:-moz-placeholder-shown {
@@ -319,10 +319,31 @@ input[type=password]::placeholder {
   width: calc((100% - 20px) / 2);
 }
 
+.form_email .form_input {
+  font-family: "SpaceGrotesk";
+}
+.form_email .form_input::-moz-placeholder {
+  font-family: "KIMM";
+}
+.form_email .form_input::placeholder {
+  font-family: "KIMM";
+}
+.form_email #email_input {
+  flex-basis: 100%;
+  margin-top: 4px;
+}
+.form_email + .security_group {
+  margin-top: 4px;
+}
+
 /* select
 ================================ */
 .select_group {
   position: relative;
+}
+.select_group .select_btn {
+  font-family: "KIMM";
+  color: #8A8A8A;
   display: block;
   width: 100%;
   height: 50px;
@@ -335,20 +356,19 @@ input[type=password]::placeholder {
   font-size: 14px;
   font-weight: 300;
   font-family: "KIMM";
-  font-family: "NanumSquare";
-  color: #8A8A8A;
 }
-.select_group:focus {
+.select_group .select_btn:focus {
   border-color: #FA7D38;
 }
-.select_group:focus > .select_list {
+.select_group .select_btn:focus:focus + .select_list {
   display: block;
 }
-.select_group > .select_list {
+.select_group .select_list {
   display: none;
   height: 164px;
-  overflow-x: none;
+  overflow-x: hidden;
   overflow-y: auto;
+  font-family: "SpaceGrotesk";
   width: 100%;
   padding: 10px 15px;
   box-sizing: border-box;
@@ -360,7 +380,7 @@ input[type=password]::placeholder {
   left: 0;
   z-index: 5;
 }
-.select_group > .select_list > li {
+.select_group .select_list .option_btn {
   width: 100%;
   height: 18px;
   margin-bottom: 10px;
@@ -369,13 +389,70 @@ input[type=password]::placeholder {
   font-weight: 300;
   font-family: "SpaceGrotesk";
 }
-.select_group > .select_list > li:hover, .select_group > .select_list > li:focus {
+.select_group .select_list .option_btn:hover, .select_group .select_list .option_btn:focus {
   color: #FA7D38;
 }
 
-#email_input {
-  margin-top: 4px;
+.security_group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.security_group > .form_input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #171717;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "KIMM";
+  width: 120px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-family: "SpaceGrotesk";
+}
+.security_group > .form_input::-moz-placeholder {
+  font-family: "KIMM";
+}
+.security_group > .form_input::placeholder {
+  font-family: "KIMM";
+}
+.security_group > .form_btn {
+  display: block;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #494949;
+  background-color: #494949;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  font-family: "KIMM";
+  font-size: 14px;
+  font-weight: 300;
+  width: calc(100% - 130px);
+}
+.security_group > .guide_txt {
+  color: #171717;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "KIMM";
+  text-align: right;
+  flex-basis: 100%;
+  align-self: flex-end;
+}
+.security_group > .guide_txt.error {
+  color: #EC1E1E;
 }
 
 /*  check box
-================================ */
+================================ *//*# sourceMappingURL=include.css.map */

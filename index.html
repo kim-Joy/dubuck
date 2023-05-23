@@ -79,7 +79,7 @@
         </dl>
       </div>
 
-      <div class="form_dl form_half mark">
+      <div class="form_email form_dl form_half mark">
         <dl>
           <dt>
             <label for="email01" class="form_label">이메일</label>
@@ -94,24 +94,32 @@
             <label for="email02" class="form_label indent">이메일</label>
           </dt>
           <dd id="email02">
-            <button class="select_group">
-              선택하세요.
+            <div class="select_group">
+              <button class="select_btn">
+                선택하세요.
+              </button>
               <ul class="select_list">
-                <li>naver.com</li>
-                <li>hanmail.net</li>
-                <li>daum.net</li>
-                <li>kakao.com</li>
-                <li>gmail.com</li>
-                <li class="option_etc">
-                  <label for="email_input">직접입력</label>
+                <li><button type="button" class="option_btn">naver.com</button></li>
+                <li><button type="button" class="option_btn">hanmail.net</button></li>
+                <li><button type="button" class="option_btn">daum.net</button></li>
+                <li><button type="button" class="option_btn">kakao.com</button></li>
+                <li><button type="button" class="option_btn">gmail.com</button></li>
+                <li>
+                  <label for="email_input" class="option_btn">직접입력</label>
                 </li>
               </ul>
-            </button>
-          </dd>
-          <dd>
+            </div>
           </dd>
         </dl>
         <input id="email_input" type="text" class="form_input" placeholder="직접 입력해주세요.">
+      </div>
+      <div class="security_group">
+        <input type="text" class="form_input readonly" placeholder="인증번호" value="ea25s7" readonly>
+        <button type="button" class="form_btn">인증번호 확인</button>
+        <p class="guide_txt">
+          인증번호가 발송 되었습니다.<br>
+          발급된 인증번호를 입력하세요.
+        </p>
       </div>
 
     </section>

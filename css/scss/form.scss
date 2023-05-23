@@ -15,7 +15,7 @@ input{
   }
   &:read-only, &.readonly,
   &:disabled, &.disabled {
-    background-color: #eee !important; color: #8A8A8A !important; outline: none;
+    background-color: $gray_f1 !important; color: $gray_68 !important; outline: none;
   }
   &:placeholder-shown {
     text-overflow: ellipsis; 
@@ -59,6 +59,23 @@ input[type=password]::placeholder {
   }
     
   }
+@mixin form_btn {
+  display: block;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #494949;
+  background-color: #494949;
+  color: #fff; 
+  line-height: 48px;
+  text-align: center;
+  font: {
+    family: $font_kr;
+    size: 14px;
+    weight: 300;
+  }
+}
 
 /* form_dl */ 
 .form_dl {
@@ -99,6 +116,21 @@ input[type=password]::placeholder {
   }
 }
 
+.form_email {
+  .form_input {
+    font-family: $font_en;
+  }
+  .form_input::placeholder {
+    font-family: $font_kr;
+  }
+  & #email_input {
+    flex-basis: 100%;
+    margin-top: 4px;
+  }
+  + .security_group {
+    margin-top: 4px;
+  }
+}
 
 /* select
 ================================ */
@@ -109,7 +141,6 @@ input[type=password]::placeholder {
   border: 1px solid #E2E2E2;
   border-radius: 5px;
   background-color: #fff;
-
 }
 
 @mixin slect_item {
@@ -130,21 +161,25 @@ input[type=password]::placeholder {
 
 .select_group {
   position: relative;
-  @include input;
-  font-family: "NanumSquare";
-  color: #8A8A8A; 
 
-  &:focus {
-    border-color: $orange;
-    > .select_list {
-      display: block;
+  .select_btn {
+    font-family: $font_kr;
+    color: #8A8A8A;
+    @include input;
+
+    &:focus{
+      border-color: $orange;
+      &:focus + .select_list {
+        display: block;
+      }
     }
   }
-  > .select_list {
+  .select_list {
     display: none;
     height: 164px; 
-    overflow-x: none;
+    overflow-x: hidden;
     overflow-y: auto;
+    font-family: $font_en;
     @include select;
     @include position(
       absolute,
@@ -152,14 +187,57 @@ input[type=password]::placeholder {
       $l : 0,
       $index : 5,
     );
-    > li {
+
+    .option_btn{
       @include slect_item;
     }
   }
 }
 
-#email_input {
-  margin-top: 4px;
+
+
+@mixin security {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  > .form_input {
+    @include input;
+    width: 120px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-family: $font_en;
+    &::placeholder {
+      font-family: $font_kr;
+    }
+  }
+  > .form_btn {
+    @include form_btn;
+    width: calc(100% - 130px); 
+  }
+}
+@mixin guidetxt {
+  color: $black;
+  line-height: 18px;
+  font: {
+    size: 12px;
+    weight: 300;
+    family: $font_kr;
+  }
+  &.error {
+    color: $error;
+  }
+}
+
+.security_group {
+  @include security;
+  > .guide_txt {
+    @include guidetxt;
+    text-align: right;
+    flex-basis: 100%;
+    align-self: flex-end;
+  }
 }
 
 /*  check box
