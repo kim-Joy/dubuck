@@ -1,4 +1,9 @@
-// layout 
+@import "common.scss";
+
+/* ================================ 
+  공통 스타일 변수
+================================ */
+// 포지션  
 @mixin position(
   $p: absolute, 
   $t: null, 
@@ -16,23 +21,126 @@
 }
 
 //팝업 버튼 스타일
-@mixin popup_btn($width, $bg, $border, $color){
-  min-width: $width;
+@mixin modal_cont_style($pd, $radius, $bg ){
+  padding: $pd;
+  border-radius: $radius;
   background-color: $bg;
-  border-color: $border;
-  color: $color;
 }
 
 
-.body_grape {
-  background-color: $grape_deep;
+//모달 공통 영역 
+@mixin modal{
+  @include position(
+    fixed, 
+    $t: 0, 
+    $l: 0, 
+    $index: 60
+  );
+  width: 100%;
+  height: 100%;
 }
-
-.model{
-  @include position(fixed, $t: 0, $l: 0, $index: 100);
-  .dim {
-    @include position($t: 50%, $l: 50%, $index: 80); 
-    background-color: rgba(0,0,0,0.5);
-
-  }
+@mixin modal_cont {
+  @include position(
+    absolute, 
+    $t: 50%, 
+    $l: 50%, 
+    $index: 80
+  );
+  max-width: 335px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+@mixin dim {
+  @include position(
+    absolute,
+    $t: 0, 
+    $l: 0, 
+    $index: 70
+  ); 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
 } 
+
+.modal_wrap {
+  @include modal;
+  > .modal_cont {
+    @include modal_cont;
+    > .modal_body {
+      margin-top: 40px;
+      padding-bottom: 50px;
+    }
+  }
+  > .dim {
+    @include dim;
+  }
+}
+
+/*  컨피그 
+-------------------------------- */
+.confirm {
+  > .modal_cont {
+    @include modal_cont_style(
+    $pd : 15px 20px,
+    $radius: 5px,
+    $bg : #fff,
+    );
+    > .modal_head {
+      position: relative;
+      > h2 {
+        display: block;
+        width: calc(100% - 10px);
+        color: $black;
+        font: {
+          weight: 700;
+          family: $font_kr;
+          size: 16px;
+        }
+      }
+      > .modal_close {
+        @include position(
+          absolute,
+          $t: 4px, 
+          $r: 0,
+        );
+        width: 10px;
+        height: 10px;
+        background-color: $black;
+        -webkit-mask-image: url($btn-exit-arrow + "x.svg");
+        mask-image: url($btn-exit-arrow + "x.svg");
+      
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background-repeat: no-repeat;
+      
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        background-size: contain;
+      
+        -webkit-mask-position: right center;
+        mask-position: right center;
+        background-position: right center;
+  
+      }
+    }
+    > .modal_body {
+      text-align: center;
+      color: $black;
+      line-height: 1.4;
+      font: {
+        size: 14px;
+        weight: 300;
+        family: $font_kr;
+      }
+    }
+    > .modal_foot {
+      > button {
+        margin: 0 auto;
+      }
+    }
+  }
+ 
+}

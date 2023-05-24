@@ -19,22 +19,106 @@
   text-indent: -9999px;
 }
 
+.visaullyhiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.indent {
+  text-indent: -9999px;
+}
+
 .body_grape {
   background-color: #3F34C0;
 }
 
-.model {
+.modal_wrap {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 60;
+  width: 100%;
+  height: 100%;
 }
-.model .dim {
+.modal_wrap > .modal_cont {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 80;
-  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 335px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+.modal_wrap > .modal_cont > .modal_body {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.modal_wrap > .dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.confirm > .modal_cont {
+  border-radius: 5px;
+  background-color: #fff;
+}
+.confirm > .modal_cont > .modal_head {
+  position: relative;
+}
+.confirm > .modal_cont > .modal_head > h2 {
+  display: block;
+  width: calc(100% - 10px);
+  color: #171717;
+  font-weight: 700;
+  font-family: "KIMM";
+  font-size: 16px;
+}
+.confirm > .modal_cont > .modal_head > .modal_close {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #171717;
+  -webkit-mask-image: url("/assets/icon/x.svg");
+  mask-image: url("/assets/icon/x.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-size: contain;
+  -webkit-mask-position: right center;
+  mask-position: right center;
+  background-position: right center;
+}
+.confirm > .modal_cont > .modal_body {
+  text-align: center;
+  color: #171717;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "KIMM";
+}
+.confirm > .modal_cont > .modal_foot > button {
+  margin: 0 auto;
 }
 
 /* 버튼 그룹 
@@ -206,22 +290,106 @@
   text-indent: -9999px;
 }
 
+.visaullyhiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.indent {
+  text-indent: -9999px;
+}
+
 .body_grape {
   background-color: #3F34C0;
 }
 
-.model {
+.modal_wrap {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 60;
+  width: 100%;
+  height: 100%;
 }
-.model .dim {
+.modal_wrap > .modal_cont {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 80;
-  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 335px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+.modal_wrap > .modal_cont > .modal_body {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.modal_wrap > .dim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.confirm > .modal_cont {
+  border-radius: 5px;
+  background-color: #fff;
+}
+.confirm > .modal_cont > .modal_head {
+  position: relative;
+}
+.confirm > .modal_cont > .modal_head > h2 {
+  display: block;
+  width: calc(100% - 10px);
+  color: #171717;
+  font-weight: 700;
+  font-family: "KIMM";
+  font-size: 16px;
+}
+.confirm > .modal_cont > .modal_head > .modal_close {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #171717;
+  -webkit-mask-image: url("/assets/icon/x.svg");
+  mask-image: url("/assets/icon/x.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-size: contain;
+  -webkit-mask-position: right center;
+  mask-position: right center;
+  background-position: right center;
+}
+.confirm > .modal_cont > .modal_body {
+  text-align: center;
+  color: #171717;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "KIMM";
+}
+.confirm > .modal_cont > .modal_foot > button {
+  margin: 0 auto;
 }
 
 /* input
@@ -455,4 +623,4 @@ input[type=password]::placeholder {
 }
 
 /*  check box
-================================ *//*# sourceMappingURL=include.css.map */
+================================ */
