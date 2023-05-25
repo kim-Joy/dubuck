@@ -138,8 +138,8 @@
     width: 16px;
     height: 10px; 
     margin-left: 8px; 
-    -webkit-mask-image: url($btn-exit-arrow + "arrow.svg");
-    mask-image: url($btn-exit-arrow + "arrow.svg");
+    -webkit-mask-image: url($assets_icon + "arrow.svg");
+    mask-image: url($assets_icon + "arrow.svg");
   
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
