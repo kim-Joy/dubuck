@@ -18,3 +18,10 @@
 .indent {
   text-indent: -9999px;
 }
+
+.text-ellipsis01 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
