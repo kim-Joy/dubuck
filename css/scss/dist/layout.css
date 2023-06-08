@@ -20,6 +20,11 @@
   text-indent: -9999px;
 }
 
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
 .text-ellipsis01 {
   display: block;
   overflow: hidden;
@@ -31,13 +36,13 @@
   공통 스타일 변수
 ================================ */
 .modal_wrap {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 60;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .modal_wrap > .modal_cont {
   position: absolute;
@@ -93,8 +98,8 @@
   width: 10px;
   height: 10px;
   background-color: #171717;
-  -webkit-mask-image: url("/assets/icon/x.svg");
-  mask-image: url("/assets/icon/x.svg");
+  -webkit-mask-image: url("../assets/icon/x.svg");
+  mask-image: url("../assets/icon/x.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   background-repeat: no-repeat;
@@ -115,4 +120,17 @@
 }
 .confirm > .modal_cont > .modal_foot > button {
   margin: 0 auto;
+}
+.confirm.suggestion_box {
+  padding: 20px 40px 20px 15px;
+  border-radius: 20px;
+  background-color: #3F34C0;
+}
+.confirm.suggestion_box > .modal_foot {
+  margin-top: 20px;
+}
+.confirm.exam_exit {
+  padding: 20px 40px 20px 30px;
+  border-radius: 20px;
+  background-color: #3F34C0;
 }

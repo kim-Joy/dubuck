@@ -238,5 +238,33 @@ input[type=password]::placeholder {
   }
 }
 
+/* textarea
+================================ */
+@mixin textarea {
+  width: 100%;
+  height: 100%; 
+  min-height: 175px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #171717;
+  font: {
+    family: $font_kr;
+    size: 14px;
+    weight: 300;
+  }
+}
+
+.textarea {
+  @include textarea; 
+  &::placeholder {
+    color: #8a8a8a;
+  }
+}
+
+
 /*  check box
 ================================ */

@@ -43,6 +43,14 @@
 
 
     <section>
+      <dl class="form_dl">
+        <dt>
+          <label for="textarea" class="form_label">불편 및 개선 내용</label>
+        </dt>
+        <dd>
+          <textarea name="textarea" id="textarea" class="textarea" placeholder="불편했거나 개선하길 원하는 내용을 적어주세요."></textarea>
+        </dd>
+      </dl>
       <dl class="form_dl form_email">
         <dt>
           <label for="email" class="form_label">이메일</label>
@@ -121,6 +129,7 @@
           발급된 인증번호를 입력하세요.
         </p>
       </div>
+      
 
     </section>
 
@@ -134,7 +143,8 @@
     <section>
       <button type="button" class="alert">Click</button>
 
-      <div class="modal_wrap confirm">
+      <!-- confirm modal -->
+      <div class="modal_wrap confirm" style="display: none;">
         <div class="modal_cont">
           <div class="modal_head">
             <h2>타이틀</h2>
@@ -148,6 +158,41 @@
           <div class="modal_foot btn_group vertical">
             <button type="button" class="btn_exit btn_small paint">확인</button>
             <button type="button" class="btn_exit btn_small paint_light">취소</button>
+          </div>
+        </div>
+        <div class="dim"></div>
+      </div>
+
+      <!-- 소리함 모달 -->
+      <div class="modal_wrap confirm suggestion_box" style="display: block;">
+        <div class="modal_cont">
+          <div class="modal_head">
+            <h2>두벅이 소리함</h2>
+            <p>불편한점, 바라는 점등 다양한 의견을 들려주세요!</p>
+          </div>
+
+          <div class="modal_foot btn_group">
+            <button type="button" class="btn_exit btn_large white paint_line">충고하기</button>
+          </div>
+        </div>
+        <div class="dim"></div>
+      </div>
+
+      <!-- 문제 나가기 -->
+      <div class="modal_wrap confirm exam_exit" style="display: block;">
+        <div class="modal_cont">
+          <div class="modal_head">
+            <h2>
+              잠깐<br>
+              아직 풀지 않은 문제들이 있습니다.
+            </h2>
+          </div>
+          <div class="modal_body">
+            <p></p>
+          </div>
+          <div class="modal_foot btn_group vertical">
+            <button type="button" class="btn_exit btn_small white paint_line">공부 끝내기</button>
+            <button type="button" class="btn_exit btn_small white paint">아직 더 풀래</button>
           </div>
         </div>
         <div class="dim"></div>

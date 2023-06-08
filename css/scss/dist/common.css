@@ -19,6 +19,11 @@
   text-indent: -9999px;
 }
 
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
 .text-ellipsis01 {
   display: block;
   overflow: hidden;

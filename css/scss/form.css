@@ -21,6 +21,11 @@
   text-indent: -9999px;
 }
 
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
 .text-ellipsis01 {
   display: block;
   overflow: hidden;
@@ -50,6 +55,11 @@
   text-indent: -9999px;
 }
 
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
 .text-ellipsis01 {
   display: block;
   overflow: hidden;
@@ -61,13 +71,13 @@
   공통 스타일 변수
 ================================ */
 .modal_wrap {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 60;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .modal_wrap > .modal_cont {
   position: absolute;
@@ -145,6 +155,19 @@
 }
 .confirm > .modal_cont > .modal_foot > button {
   margin: 0 auto;
+}
+.confirm.suggestion_box {
+  padding: 20px 40px 20px 15px;
+  border-radius: 20px;
+  background-color: #3F34C0;
+}
+.confirm.suggestion_box > .modal_foot {
+  margin-top: 20px;
+}
+.confirm.exam_exit {
+  padding: 20px 40px 20px 30px;
+  border-radius: 20px;
+  background-color: #3F34C0;
 }
 
 /* input
@@ -375,6 +398,30 @@ input[type=password]::placeholder {
 }
 .security_group > .guide_txt.error {
   color: #EC1E1E;
+}
+
+/* textarea
+================================ */
+.textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 175px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #171717;
+  font-family: "KIMM";
+  font-size: 14px;
+  font-weight: 300;
+}
+.textarea::-moz-placeholder {
+  color: #8a8a8a;
+}
+.textarea::placeholder {
+  color: #8a8a8a;
 }
 
 /*  check box

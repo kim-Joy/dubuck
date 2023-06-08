@@ -67,8 +67,8 @@
 } 
 
 .modal_wrap {
-  display: none;
   @include modal;
+  display: none;
   > .modal_cont {
     @include modal_cont;
     > .modal_body {
@@ -146,6 +146,24 @@
         margin: 0 auto;
       }
     }
+  }
+  &.suggestion_box {
+    @include modal_cont_style(
+      $pd: 20px 40px 20px 15px, 
+      $radius: 20px,
+      $bg: $grape_deep
+    );
+    > .modal_foot {
+      margin-top: 20px;
+    }
+  }
+  &.exam_exit {
+    @include modal_cont_style(
+      $pd: 20px 40px 20px 30px, 
+      $radius: 20px,
+      $bg: $grape_deep
+    );
+
   }
  
 }

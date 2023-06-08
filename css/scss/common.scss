@@ -20,6 +20,7 @@ $assets_icon : "../assets/icon/";
 
 .visaullyhiden {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0,0,0,0); overflow: hidden; }
 .indent {text-indent: -9999px; }
+.none_scroll {overflow: hidden; touch-action: none;}
 
 @mixin ellipsis2($line, $w, $h) {
   overflow: hiddn;
@@ -34,5 +35,5 @@ $assets_icon : "../assets/icon/";
   word-wrap: break-word;
 }
 .text-ellipsis01 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.text-ellipsis02 {@include ellipsis2; }
+.text-ellipsis02 { }
 
