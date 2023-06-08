@@ -94,8 +94,8 @@
   width: 10px;
   height: 10px;
   background-color: #171717;
-  -webkit-mask-image: url("/assets/icon/x.svg");
-  mask-image: url("/assets/icon/x.svg");
+  -webkit-mask-image: url("../assets/icon/x.svg");
+  mask-image: url("../assets/icon/x.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   background-repeat: no-repeat;

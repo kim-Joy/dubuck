@@ -2,16 +2,16 @@
 /* 한국기계 연구원 서체 */
 @font-face {
   font-family: 'KIMM';
-  src: url('fonts/KIMM_Light.woff2') format('woff2'),
-      url('fonts/KIMM_Light.woff') format('woff');
+  src: url('../fonts/KIMM_Light.woff2') format('woff2'),
+      url('../fonts/KIMM_Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 } 
 
 @font-face {
   font-family: 'KIMM';
-  src: url('fonts/KIMM_bold.woff2') format('woff2'),
-      url('fonts/KIMM_bold.woff') format('woff');
+  src: url('../fonts/KIMM_bold.woff2') format('woff2'),
+      url('../fonts/KIMM_bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 } 
@@ -21,36 +21,36 @@
 /* Space Grotesk - 영어만 사용 */
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('fonts/SpaceGrotesk-Light.woff2') format('woff2'),
-      url('fonts/SpaceGrotesk-Light.woff') format('woff');
+  src: url('../fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 } 
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
-      url('fonts/SpaceGrotesk-Regular.woff') format('woff');
+  src: url('../fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 } 
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
-      url('fonts/SpaceGrotesk-Medium.woff') format('woff');
+  src: url('../fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 } 
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-      url('fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+  src: url('../fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 } 
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
-      url('fonts/SpaceGrotesk-Bold.woff') format('woff');
+  src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+      url('../fonts/SpaceGrotesk-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 } 
