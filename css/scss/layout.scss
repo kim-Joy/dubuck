@@ -20,9 +20,19 @@
   z-index: $index;
 }
 
+@mixin popup_btn($width, $bg, $border, $color){
+  min-width: $width;
+  background-color: $bg;
+  border-color: $border;
+  color: $color;
+}
+
 //팝업 버튼 스타일
-@mixin modal_cont_style($pd, $radius, $bg ){
-  padding: $pd;
+@mixin modal_cont_style($pd_t, $pd_b, $pd_lt, $pd_rt, $radius, $bg ){
+  padding-top: $pd_t;
+  padding-bottom: $pd_b;
+  padding-left: $pd_lt;
+  padding-right: $pd_rt;
   border-radius: $radius;
   background-color: $bg;
 }
@@ -89,7 +99,10 @@
 .confirm {
   > .modal_cont {
     @include modal_cont_style(
-    $pd : 15px 20px,
+    $pd_t : 15px,
+    $pd_b : 15px,
+    $pd_lt: 20px,
+    $pd_rt: 20px,
     $radius: 5px,
     $bg : #fff,
     );
@@ -141,20 +154,19 @@
         family: $font_kr;
       }
     }
-    > .modal_foot {
-      > button {
-        margin: 0 auto;
-      }
-    }
   }
   &.suggestion_box {
     > .modal_cont {
       @include modal_cont_style(
-        $pd: 20px 40px 20px 15px, 
+        $pd_t : 40px,
+        $pd_b : 15px,
+        $pd_lt: 20px,
+        $pd_rt: 20px,
         $radius: 20px,
         $bg: $grape_deep
       );
       > .modal_head {
+        margin-bottom: 20px;
         text-align: left; 
         > h2 {
           color: #fff;
@@ -164,22 +176,24 @@
           }
         }
         > .assistant {
+          margin-top: 4px;
           color: #fff;
           font: {
+            family: $font_kr;
             size: 12px;
             weight: 300;
           }
         }
-      }
-      > .modal_foot {
-        margin-top: 20px;
       }
     }
   }
   &.exam_exit {
     > .modal_cont {
       @include modal_cont_style(
-        $pd: 20px 40px 20px 30px, 
+        $pd_t : 40px,
+        $pd_b : 30px,
+        $pd_lt: 20px,
+        $pd_rt: 20px,
         $radius: 20px,
         $bg: $grape_deep
       );
@@ -194,6 +208,8 @@
         }
       }
       > .modal_body{
+        margin-top: 25px;
+        padding-bottom: 15px;
         text-align: left; 
         .txt {
           color: #fff;

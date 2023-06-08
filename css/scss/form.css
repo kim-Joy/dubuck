@@ -111,7 +111,10 @@
 /*  컨피그 
 -------------------------------- */
 .confirm > .modal_cont {
-  padding: 15px 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
   background-color: #fff;
 }
@@ -153,15 +156,16 @@
   font-weight: 300;
   font-family: "KIMM";
 }
-.confirm > .modal_cont > .modal_foot > button {
-  margin: 0 auto;
-}
 .confirm.suggestion_box > .modal_cont {
-  padding: 20px 40px 20px 15px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 20px;
   background-color: #3F34C0;
 }
 .confirm.suggestion_box > .modal_cont > .modal_head {
+  margin-bottom: 20px;
   text-align: left;
 }
 .confirm.suggestion_box > .modal_cont > .modal_head > h2 {
@@ -171,6 +175,7 @@
 }
 .confirm.suggestion_box > .modal_cont > .modal_head > .assistant {
   color: #fff;
+  font-family: "KIMM";
   font-size: 12px;
   font-weight: 300;
 }
@@ -178,7 +183,10 @@
   margin-top: 20px;
 }
 .confirm.exam_exit > .modal_cont {
-  padding: 20px 40px 20px 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 20px;
   background-color: #3F34C0;
 }
@@ -189,6 +197,8 @@
   font-weight: 700;
 }
 .confirm.exam_exit > .modal_cont > .modal_body {
+  margin-top: 25px;
+  padding-bottom: 15px;
   text-align: left;
 }
 .confirm.exam_exit > .modal_cont > .modal_body .txt {
@@ -443,9 +453,13 @@ input[type=password]::placeholder {
   overflow-x: hidden;
   overflow-y: auto;
   color: #171717;
+  outline: none;
   font-family: "KIMM";
   font-size: 14px;
   font-weight: 300;
+}
+.textarea:hover {
+  border-color: #FA7D38;
 }
 .textarea::-moz-placeholder {
   color: #8a8a8a;
