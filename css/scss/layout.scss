@@ -38,10 +38,8 @@
   );
   width: 100%;
   height: 100%;
-  &.active {
-    display: block;
-  }
 }
+
 @mixin modal_cont {
   @include position(
     absolute, 
@@ -69,8 +67,8 @@
 } 
 
 .modal_wrap {
-  @include modal;
   display: none;
+  @include modal;
   > .modal_cont {
     @include modal_cont;
     > .modal_body {
@@ -80,6 +78,9 @@
   }
   > .dim {
     @include dim;
+  }
+  &.active {
+    display: block;
   }
 }
 
