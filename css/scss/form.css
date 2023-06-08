@@ -174,13 +174,11 @@
   font-weight: 700;
 }
 .confirm.suggestion_box > .modal_cont > .modal_head > .assistant {
+  margin-top: 4px;
   color: #fff;
   font-family: "KIMM";
   font-size: 12px;
   font-weight: 300;
-}
-.confirm.suggestion_box > .modal_cont > .modal_foot {
-  margin-top: 20px;
 }
 .confirm.exam_exit > .modal_cont {
   padding-top: 40px;
