@@ -68,7 +68,6 @@
 
 .modal_wrap {
   @include modal;
-  display: none;
   > .modal_cont {
     @include modal_cont;
     > .modal_body {
@@ -81,7 +80,8 @@
   }
   &.active {
     display: block;
-  }
+  }  
+  display: none;
 }
 
 /*  컨피그 
@@ -148,22 +148,68 @@
     }
   }
   &.suggestion_box {
-    @include modal_cont_style(
-      $pd: 20px 40px 20px 15px, 
-      $radius: 20px,
-      $bg: $grape_deep
-    );
-    > .modal_foot {
-      margin-top: 20px;
+    > .modal_cont {
+      @include modal_cont_style(
+        $pd: 20px 40px 20px 15px, 
+        $radius: 20px,
+        $bg: $grape_deep
+      );
+      > .modal_head {
+        text-align: left; 
+        > h2 {
+          color: #fff;
+          font: {
+            size: 18px;
+            weight: 700;
+          }
+        }
+        > .assistant {
+          color: #fff;
+          font: {
+            size: 12px;
+            weight: 300;
+          }
+        }
+      }
+      > .modal_foot {
+        margin-top: 20px;
+      }
     }
   }
   &.exam_exit {
-    @include modal_cont_style(
-      $pd: 20px 40px 20px 30px, 
-      $radius: 20px,
-      $bg: $grape_deep
-    );
-
+    > .modal_cont {
+      @include modal_cont_style(
+        $pd: 20px 40px 20px 30px, 
+        $radius: 20px,
+        $bg: $grape_deep
+      );
+      > .modal_head {
+        > h2 {
+          margin-bottom: 25px;
+          color: #fff;
+          font: {
+            size: 18px;
+            weight: 700;
+          }
+        }
+      }
+      > .modal_body{
+        text-align: left; 
+        .txt {
+          color: #fff;
+          font: {
+            size: 12px;
+            weight: 300;
+          }
+          > u {
+            text-decoration: underline;
+          }
+        }
+        
+      } 
+    }
   }
- 
 }
+
+
+

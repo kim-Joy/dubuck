@@ -133,8 +133,8 @@
   width: 10px;
   height: 10px;
   background-color: #171717;
-  -webkit-mask-image: url("../assets/icon/x.svg");
-  mask-image: url("../assets/icon/x.svg");
+  -webkit-mask-image: url("../../assets/icon/x.svg");
+  mask-image: url("../../assets/icon/x.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   background-repeat: no-repeat;
@@ -156,18 +156,48 @@
 .confirm > .modal_cont > .modal_foot > button {
   margin: 0 auto;
 }
-.confirm.suggestion_box {
+.confirm.suggestion_box > .modal_cont {
   padding: 20px 40px 20px 15px;
   border-radius: 20px;
   background-color: #3F34C0;
 }
-.confirm.suggestion_box > .modal_foot {
+.confirm.suggestion_box > .modal_cont > .modal_head {
+  text-align: left;
+}
+.confirm.suggestion_box > .modal_cont > .modal_head > h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.confirm.suggestion_box > .modal_cont > .modal_head > .assistant {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}
+.confirm.suggestion_box > .modal_cont > .modal_foot {
   margin-top: 20px;
 }
-.confirm.exam_exit {
+.confirm.exam_exit > .modal_cont {
   padding: 20px 40px 20px 30px;
   border-radius: 20px;
   background-color: #3F34C0;
+}
+.confirm.exam_exit > .modal_cont > .modal_head > h2 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.confirm.exam_exit > .modal_cont > .modal_body {
+  text-align: left;
+}
+.confirm.exam_exit > .modal_cont > .modal_body .txt {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}
+.confirm.exam_exit > .modal_cont > .modal_body .txt > u {
+  text-decoration: underline;
 }
 
 /* input
