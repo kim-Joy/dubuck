@@ -26,15 +26,14 @@
   touch-action: none;
 }
 
-.text-ellipsis01 {
+.text_ellipsis01 {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.text-ellipsis02 {
-  overflow: hiddn;
+.text_ellipsis02 {
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -44,6 +43,7 @@
   text-overflow: ellipsis;
   white-space: normal;
   word-wrap: break-word;
+  overflow: hidden;
 }
 
 /* ================================ 

@@ -21,21 +21,21 @@ $assets_icon : "../../assets/icon/";
 .indent {text-indent: -9999px; }
 .none_scroll {overflow: hidden; touch-action: none;}
 
-@mixin ellipsis($line, $h) {
-  overflow: hiddn;
+@mixin ellipsis($line, $w, $h) {
   display: block;
   display: -webkit-box; 
   -webkit-line-clamp: $line; 
   -webkit-box-orient: vertical;
-  width: 100%; 
+  width: $w; 
   height: $h;
   text-overflow: ellipsis;
   white-space: normal; 
-  word-wrap: break-word;
+  word-wrap: break-word;  
+  overflow: hidden;
 }
-.text-ellipsis01 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.text-ellipsis02 { 
-  @include ellipsis(2, auto);
+.text_ellipsis01 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.text_ellipsis02 { 
+  @include ellipsis(2, 100%, auto);
 }
 
 
