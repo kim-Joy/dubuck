@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../font.css";
+@import "../font_cdn.css";
 @import "../reset.css";
 .body_grape {
   background-color: #3F34C0;
