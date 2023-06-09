@@ -33,147 +33,25 @@
   white-space: nowrap;
 }
 
+.text-ellipsis02 {
+  overflow: hiddn;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 /* ================================ 
-  공통 스타일 변수
+  폼 영역 
 ================================ */
-.modal_wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 60;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.modal_wrap > .modal_cont {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 80;
-  max-width: 335px;
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  transform: translate(-50%, -50%);
-}
-.modal_wrap > .modal_cont > .modal_body {
-  margin-top: 40px;
-  padding-bottom: 50px;
-}
-.modal_wrap > .dim {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 70;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal_wrap.active {
-  display: block;
-}
-
-/*  컨피그 
--------------------------------- */
-.confirm > .modal_cont {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-  background-color: #fff;
-}
-.confirm > .modal_cont > .modal_head {
-  position: relative;
-}
-.confirm > .modal_cont > .modal_head > h2 {
-  display: block;
-  width: calc(100% - 10px);
-  color: #171717;
-  font-weight: 700;
-  font-family: "KIMM";
-  font-size: 16px;
-}
-.confirm > .modal_cont > .modal_head > .modal_close {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  background-color: #171717;
-  -webkit-mask-image: url("../../assets/icon/x.svg");
-  mask-image: url("../../assets/icon/x.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  background-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  background-size: contain;
-  -webkit-mask-position: right center;
-  mask-position: right center;
-  background-position: right center;
-}
-.confirm > .modal_cont > .modal_body {
-  text-align: center;
-  color: #171717;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "KIMM";
-}
-.confirm.suggestion_box > .modal_cont {
-  padding-top: 40px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 20px;
-  background-color: #3F34C0;
-}
-.confirm.suggestion_box > .modal_cont > .modal_head {
-  margin-bottom: 20px;
-  text-align: left;
-}
-.confirm.suggestion_box > .modal_cont > .modal_head > h2 {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-}
-.confirm.suggestion_box > .modal_cont > .modal_head > .assistant {
-  margin-top: 4px;
-  color: #fff;
-  font-family: "KIMM";
-  font-size: 12px;
-  font-weight: 300;
-}
-.confirm.exam_exit > .modal_cont {
-  padding-top: 40px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 20px;
-  background-color: #3F34C0;
-}
-.confirm.exam_exit > .modal_cont > .modal_head > h2 {
-  margin-bottom: 25px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-}
-.confirm.exam_exit > .modal_cont > .modal_body {
-  margin-top: 25px;
-  padding-bottom: 15px;
-  text-align: left;
-}
-.confirm.exam_exit > .modal_cont > .modal_body .txt {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 300;
-}
-.confirm.exam_exit > .modal_cont > .modal_body .txt > u {
-  text-decoration: underline;
-}
-
+/* ================================ 
+  레이아웃 변수
+================================ */
 /* 버튼 그룹 
 ================================ */
 .btn_group.horzion {
@@ -328,4 +206,4 @@
   background-color: transparent;
   border-color: #fff;
   color: #fff;
-}/*# sourceMappingURL=btn.css.map */
+}

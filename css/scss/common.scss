@@ -1,5 +1,4 @@
 // 공통 및 인클루드 시킬 소스
-
 $font_kr: "KIMM";
 $font_en: "SpaceGrotesk";
 
@@ -22,18 +21,232 @@ $assets_icon : "../../assets/icon/";
 .indent {text-indent: -9999px; }
 .none_scroll {overflow: hidden; touch-action: none;}
 
-@mixin ellipsis2($line, $w, $h) {
+@mixin ellipsis($line, $h) {
   overflow: hiddn;
   display: block;
   display: -webkit-box; 
   -webkit-line-clamp: $line; 
   -webkit-box-orient: vertical;
-  width: $w; 
+  width: 100%; 
   height: $h;
   text-overflow: ellipsis;
   white-space: normal; 
   word-wrap: break-word;
 }
 .text-ellipsis01 {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.text-ellipsis02 { }
+.text-ellipsis02 { 
+  @include ellipsis(2, auto);
+}
 
+
+
+
+
+/* ================================ 
+  폼 영역 
+================================ */
+@mixin label {
+  display: block;
+  margin-bottom: 4px;
+  color: $black;
+  font: {
+    size: 14px;
+    weight: 300;
+    family: $font_kr;
+  }
+}
+@mixin input{
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px; 
+  border-radius: 5px;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: $black;
+  font: {
+    size: 14px;
+    weight: 300;
+    family: $font_kr;
+  }
+    
+  }
+@mixin form_btn {
+  display: block;
+  height: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #494949;
+  background-color: #494949;
+  color: #fff; 
+  line-height: 48px;
+  text-align: center;
+  font: {
+    family: $font_kr;
+    size: 14px;
+    weight: 300;
+  }
+}
+
+@mixin security {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  > .form_input {
+    @include input;
+    width: 120px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-family: $font_en;
+    &::placeholder {
+      font-family: $font_kr;
+    }
+  }
+  > .form_btn {
+    @include form_btn;
+    width: calc(100% - 130px); 
+  }
+}
+@mixin guidetxt {
+  color: $black;
+  line-height: 18px;
+  font: {
+    size: 12px;
+    weight: 300;
+    family: $font_kr;
+  }
+  &.error {
+    color: $error;
+  }
+}
+
+
+// select & textarea 
+@mixin select {
+  width: 100%; 
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #E2E2E2;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+@mixin slect_item {
+  width: 100%; 
+  height: 18px;
+  margin-bottom: 10px;
+  color: $black;
+  font: {
+    size: 14px;
+    weight: 300;
+    family: $font_en;
+  }
+  &:hover,
+  &:focus {
+    color: $orange;
+  } 
+}
+
+@mixin textarea {
+  width: 100%;
+  height: 100%; 
+  min-height: 175px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #171717;
+  outline: none;
+  font: {
+    family: $font_kr;
+    size: 14px;
+    weight: 300;
+  }
+  &:hover {
+    border-color: $orange;
+  }
+}
+
+
+
+/* ================================ 
+  레이아웃 변수
+================================ */
+// 포지션  
+@mixin position(
+  $p: absolute, 
+  $t: null, 
+  $b: null, 
+  $l: null,
+  $r: null,
+  $index: null
+){
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  z-index: $index;
+}
+
+@mixin popup_btn($width, $bg, $border, $color){
+  min-width: $width;
+  background-color: $bg;
+  border-color: $border;
+  color: $color;
+}
+
+//팝업 버튼 스타일
+@mixin modal_cont_style($pd_t, $pd_b, $pd_lt, $pd_rt, $radius, $bg ){
+  padding-top: $pd_t;
+  padding-bottom: $pd_b;
+  padding-left: $pd_lt;
+  padding-right: $pd_rt;
+  border-radius: $radius;
+  background-color: $bg;
+}
+
+
+//모달 공통 영역 
+@mixin modal{
+  @include position(
+    fixed, 
+    $t: 0, 
+    $l: 0, 
+    $index: 60
+  );
+  width: 100%;
+  height: 100%;
+}
+
+@mixin modal_cont {
+  @include position(
+    absolute, 
+    $t: 50%, 
+    $l: 50%, 
+    $index: 80
+  );
+  max-width: 335px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+@mixin dim {
+  @include position(
+    absolute,
+    $t: 0, 
+    $l: 0, 
+    $index: 70
+  ); 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}

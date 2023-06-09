@@ -1,81 +1,5 @@
 @import "common.scss";
 
-/* ================================ 
-  공통 스타일 변수
-================================ */
-// 포지션  
-@mixin position(
-  $p: absolute, 
-  $t: null, 
-  $b: null, 
-  $l: null,
-  $r: null,
-  $index: null
-){
-  position: $p;
-  top: $t;
-  bottom: $b;
-  left: $l;
-  right: $r;
-  z-index: $index;
-}
-
-@mixin popup_btn($width, $bg, $border, $color){
-  min-width: $width;
-  background-color: $bg;
-  border-color: $border;
-  color: $color;
-}
-
-//팝업 버튼 스타일
-@mixin modal_cont_style($pd_t, $pd_b, $pd_lt, $pd_rt, $radius, $bg ){
-  padding-top: $pd_t;
-  padding-bottom: $pd_b;
-  padding-left: $pd_lt;
-  padding-right: $pd_rt;
-  border-radius: $radius;
-  background-color: $bg;
-}
-
-
-//모달 공통 영역 
-@mixin modal{
-  @include position(
-    fixed, 
-    $t: 0, 
-    $l: 0, 
-    $index: 60
-  );
-  width: 100%;
-  height: 100%;
-}
-
-@mixin modal_cont {
-  @include position(
-    absolute, 
-    $t: 50%, 
-    $l: 50%, 
-    $index: 80
-  );
-  max-width: 335px;
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  transform: translate(-50%, -50%);
-}
-@mixin dim {
-  @include position(
-    absolute,
-    $t: 0, 
-    $l: 0, 
-    $index: 70
-  ); 
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-} 
-
 .modal_wrap {
   @include modal;
   > .modal_cont {
@@ -110,7 +34,6 @@
       position: relative;
       > h2 {
         display: block;
-        width: calc(100% - 10px);
         color: $black;
         font: {
           weight: 700;
@@ -141,7 +64,9 @@
         -webkit-mask-position: right center;
         mask-position: right center;
         background-position: right center;
-  
+        & h2 {
+          width: calc(100% - 10px);
+        }
       }
     }
     > .modal_body {
@@ -216,6 +141,9 @@
           font: {
             size: 12px;
             weight: 300;
+          }
+          + .txt {
+            margin-top: 20px;
           }
           > u {
             text-decoration: underline;

@@ -32,8 +32,21 @@
   white-space: nowrap;
 }
 
+.text-ellipsis02 {
+  overflow: hiddn;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 /* ================================ 
-  공통 스타일 변수
+  레이아웃 변수
 ================================ */
 .modal_wrap {
   position: fixed;
@@ -88,7 +101,6 @@
 }
 .confirm > .modal_cont > .modal_head > h2 {
   display: block;
-  width: calc(100% - 10px);
   color: #171717;
   font-weight: 700;
   font-family: "KIMM";
@@ -112,6 +124,9 @@
   -webkit-mask-position: right center;
   mask-position: right center;
   background-position: right center;
+}
+.confirm > .modal_cont > .modal_head > .modal_close h2 {
+  width: calc(100% - 10px);
 }
 .confirm > .modal_cont > .modal_body {
   text-align: center;
@@ -168,6 +183,9 @@
   color: #fff;
   font-size: 12px;
   font-weight: 300;
+}
+.confirm.exam_exit > .modal_cont > .modal_body .txt + .txt {
+  margin-top: 20px;
 }
 .confirm.exam_exit > .modal_cont > .modal_body .txt > u {
   text-decoration: underline;

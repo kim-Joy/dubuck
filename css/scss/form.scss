@@ -1,5 +1,4 @@
 @import "common.scss";
-@import "layout.scss";
 
 /* input
 ================================ */
@@ -29,53 +28,6 @@ input[type=password]::placeholder {
 	font-family: $font_kr; 
 }
 
-
-
-
-@mixin label {
-  display: block;
-  margin-bottom: 4px;
-  color: $black;
-  font: {
-    size: 14px;
-    weight: 300;
-    family: $font_kr;
-  }
-}
-@mixin input{
-  display: block;
-  width: 100%;
-  height: 50px;
-  padding: 0 15px; 
-  border-radius: 5px;
-  border: 1px solid #E2E2E2;
-  box-sizing: border-box;
-  background-color: #fff;
-  color: $black;
-  font: {
-    size: 14px;
-    weight: 300;
-    family: $font_kr;
-  }
-    
-  }
-@mixin form_btn {
-  display: block;
-  height: 50px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid #494949;
-  background-color: #494949;
-  color: #fff; 
-  line-height: 48px;
-  text-align: center;
-  font: {
-    family: $font_kr;
-    size: 14px;
-    weight: 300;
-  }
-}
 
 /* form_dl */ 
 .form_dl {
@@ -134,31 +86,6 @@ input[type=password]::placeholder {
 
 /* select
 ================================ */
-@mixin select {
-  width: 100%; 
-  padding: 10px 15px;
-  box-sizing: border-box;
-  border: 1px solid #E2E2E2;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-@mixin slect_item {
-  width: 100%; 
-  height: 18px;
-  margin-bottom: 10px;
-  color: $black;
-  font: {
-    size: 14px;
-    weight: 300;
-    family: $font_en;
-  }
-  &:hover,
-  &:focus {
-    color: $orange;
-  } 
-}
-
 .select_group {
   position: relative;
 
@@ -194,39 +121,6 @@ input[type=password]::placeholder {
   }
 }
 
-@mixin security {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  > .form_input {
-    @include input;
-    width: 120px;
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-family: $font_en;
-    &::placeholder {
-      font-family: $font_kr;
-    }
-  }
-  > .form_btn {
-    @include form_btn;
-    width: calc(100% - 130px); 
-  }
-}
-@mixin guidetxt {
-  color: $black;
-  line-height: 18px;
-  font: {
-    size: 12px;
-    weight: 300;
-    family: $font_kr;
-  }
-  &.error {
-    color: $error;
-  }
-}
 
 .security_group {
   @include security;
@@ -240,28 +134,6 @@ input[type=password]::placeholder {
 
 /* textarea
 ================================ */
-@mixin textarea {
-  width: 100%;
-  height: 100%; 
-  min-height: 175px;
-  padding: 8px 8px;
-  box-sizing: border-box;
-  border: 1px solid #e2e2e2;
-  border-radius: 5px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  color: #171717;
-  outline: none;
-  font: {
-    family: $font_kr;
-    size: 14px;
-    weight: 300;
-  }
-  &:hover {
-    border-color: $orange;
-  }
-}
-
 .textarea {
   @include textarea; 
   &::placeholder {
