@@ -1,17 +1,59 @@
 @charset "UTF-8";
+@import "../font.css";
 @import "../reset.css";
-@font-face {
-  font-family: "KIMM";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+.body_grape {
+  background-color: #3F34C0;
 }
-@font-face {
-  font-family: "KIMM";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+
+.visaullyhiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
+
+.indent {
+  text-indent: -9999px;
+}
+
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.text_ellipsis01 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text_ellipsis02 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* ================================ 
+  폼 영역 
+================================ */
+/* ================================ 
+  레이아웃 변수
+================================ */
 .body_grape {
   background-color: #3F34C0;
 }
