@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.body_grape {
+  background-color: #3F34C0;
+}
+
+.visaullyhiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.indent {
+  text-indent: -9999px;
+}
+
+.none_scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.text_ellipsis01 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text_ellipsis02 {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: auto;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* ================================ 
+  폼 영역 
+================================ */
+/* ================================ 
+  레이아웃 변수
+================================ */
+/* ================================ 
+  아이템 리스트
+================================ */
+.dis_flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px 15px;
+}
+.dis_flex > li {
+  width: 160px;
+  height: 160px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.dis_flex.depth > li {
+  box-shadow: inset 2px 4px 4px 0 rgba(0, 0, 0, 0.171), inset -2px -4px 4px 0 rgba(0, 0, 0, 0.171);
+}
+
+.item_wrap > .tit {
+  color: #171717;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "KIMM";
+}
+.item_wrap.result .tit {
+  margin-bottom: 20px;
+}
+.item_wrap.result li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.item_wrap.result .date {
+  color: #686868;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "SpaceGrotesk";
+}
+.item_wrap.result .count {
+  display: block;
+  color: #171717;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "SpaceGrotesk";
+}
+.item_wrap.result .perfect {
+  display: block;
+  text-align: right;
+  color: #EC1E1E;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "SpaceGrotesk";
+}
+
+.score_dl {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px 15px;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 5px 0;
+}
+.score_dl dt {
+  color: #171717;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "KIMM";
+}
+.score_dl dd {
+  width: 42px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  line-height: 20px;
+  color: #686868;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "SpaceGrotesk";
+}
+.score_dl.answer dd {
+  background-color: #FA7D38;
+  color: #fff;
+}

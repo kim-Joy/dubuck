@@ -1,0 +1,101 @@
+@import "common.scss";
+
+.dis_flex {
+  @include item;
+  > li {
+    @include item_style;
+  }
+  &.depth {
+    > li {
+      box-shadow: inset 2px 4px 4px 0 rgba(0, 0, 0, 0.171), inset -2px -4px 4px 0 rgba(0,0,0,0.171);
+    }
+  }
+}
+
+
+.item_wrap {
+ > .tit {
+  color: $black;
+  font: {
+    size: 18px;
+    weight: 700;
+    family: $font_kr;
+  }
+ } 
+ &.result {
+  & .tit {
+    margin-bottom: 20px; 
+  }
+  li {
+    > a {
+      display: block;
+      width: 100%; 
+      height: 100%;
+    }
+  }
+  & .date {
+    color: $gray_68;
+    font: {
+      size: 12px;
+      weight: 300;
+      family: $font_en;
+    }
+  }
+  & .count {
+    display:block;
+    color: $black; 
+    font: {
+      size: 32px;
+      weight: 700;
+      family: $font_en;
+    }
+  }
+  & .perfect {
+    display: block;
+    text-align: right;
+    color: $error;
+    text-transform: uppercase;
+    font: {
+      size: 14px;
+      weight: 700;
+      family: $font_en;
+    }
+  }
+ }
+}
+
+.score_dl {
+  @include item;
+  margin-top: 5px;
+  justify-content: space-between;
+  gap: 5px 0;
+  & dt {
+    color: $black;
+    font: {
+      size: 12px;
+      weight: 300;
+      family: $font_kr;
+    }
+  }
+  & dd {
+    width: 42px;
+    height: 20px;
+    background-color: $gray_f1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    line-height: 20px;
+    color: $gray_68;
+    text-align: center;
+    font: {
+      size: 12px;
+      weight: 300;
+      family: $font_en;
+    }
+  }
+  &.answer {
+    & dd {
+      background-color: $orange;
+      color: #fff;
+    }
+  }
+}

@@ -52,6 +52,9 @@
 /* ================================ 
   레이아웃 변수
 ================================ */
+/* ================================ 
+  아이템 리스트
+================================ */
 .modal_wrap {
   position: fixed;
   top: 0;
@@ -193,4 +196,4 @@
 }
 .confirm.exam_exit > .modal_cont > .modal_body .txt > u {
   text-decoration: underline;
-}
+}/*# sourceMappingURL=layout.css.map */

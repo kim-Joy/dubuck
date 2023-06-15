@@ -250,3 +250,27 @@ $assets_icon : "../../assets/icon/";
   height: 100%;
   background-color: rgba(0,0,0,0.4);
 }
+
+
+
+
+
+/* ================================ 
+  아이템 리스트
+================================ */
+@mixin item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px 15px;
+}
+
+@mixin item_style {
+  width: 160px; 
+  height: 160px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
