@@ -11,6 +11,7 @@ $grape_deep: #3F34C0;
 $gray_f1 : #f1f1f1;
 $gray_68 : #686868;
 $assets_icon : "../../assets/icon/";
+$assets_common : "../../assets/common/";
 
 
 .body_grape {
@@ -263,6 +264,7 @@ $assets_icon : "../../assets/icon/";
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px 15px;
 }
 

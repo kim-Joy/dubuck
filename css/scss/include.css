@@ -113,6 +113,65 @@
 /* ================================ 
   아이템 리스트
 ================================ */
+.logo {
+  display: block;
+  width: 50px;
+  height: 26px;
+  background: url("../../assets/common/logo.png") no-repeat left center;
+  background-size: contain;
+}
+
+.entry_base {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 15px;
+  gap: 0;
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
+.entry_base .dubuck {
+  width: 160px;
+  height: 160px;
+  background: url("../../assets/common/dubuck.png") no-repeat right top;
+  background-size: contain;
+}
+.entry_base .attendance {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  padding: 40px 20px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #242424;
+}
+.entry_base .attendance:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -23px;
+  left: 0;
+  background: url("../../assets/icon/attendance_hd.png") no-repeat top center;
+  background-size: 100% auto;
+}
+.entry_base .attendance .tit {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "KIMM";
+}
+.entry_base .attendance .count {
+  display: block;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "KIMM";
+}
+
 .modal_wrap {
   position: fixed;
   top: 0;
@@ -845,12 +904,13 @@ input[type=password]::placeholder {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px 15px;
 }
 .dis_flex > li {
   width: 160px;
   height: 160px;
-  padding: 15px 20px;
+  padding: 5px 20px;
   box-sizing: border-box;
   border-radius: 20px;
 }
@@ -867,7 +927,7 @@ input[type=password]::placeholder {
 .item_wrap.result .tit {
   margin-bottom: 20px;
 }
-.item_wrap.result li > a {
+.item_wrap.result li > a, .item_wrap.result li button {
   display: block;
   width: 100%;
   height: 100%;
@@ -894,12 +954,73 @@ input[type=password]::placeholder {
   font-weight: 700;
   font-family: "SpaceGrotesk";
 }
+.item_wrap.course li {
+  position: relative;
+  padding: 30px 20px;
+}
+.item_wrap.course li > a, .item_wrap.course li button {
+  display: block;
+  width: 100%;
+}
+.item_wrap.course li strong {
+  display: block;
+  color: #fff;
+  text-align: right;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "KIMM";
+}
+.item_wrap.course li.word {
+  background-color: #6153FF;
+}
+.item_wrap.course li.word:after {
+  -webkit-mask-image: url("../../assets/icon/book.svg");
+  mask-image: url("../../assets/icon/book.svg");
+}
+.item_wrap.course li.exam {
+  background-color: #FA7D38;
+}
+.item_wrap.course li.exam:after {
+  -webkit-mask-image: url("../../assets/icon/book_open.svg");
+  mask-image: url("../../assets/icon/book_open.svg");
+}
+.item_wrap.course li.grade {
+  background-color: #F64848;
+}
+.item_wrap.course li.grade:after {
+  -webkit-mask-image: url("../../assets/icon/flag.svg");
+  mask-image: url("../../assets/icon/flag.svg");
+}
+.item_wrap.course li:after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+}
+.item_wrap.course li:nth-child(even) {
+  background-position: bottom right;
+}
+.item_wrap.course li:nth-child(even) strong {
+  text-align: left;
+}
+.item_wrap.course li:nth-child(even):after {
+  left: auto;
+  right: 20px;
+}
 
 .score_dl {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px 15px;
   margin-top: 5px;
   justify-content: space-between;
@@ -927,4 +1048,25 @@ input[type=password]::placeholder {
 .score_dl.answer dd {
   background-color: #FA7D38;
   color: #fff;
+}
+
+.entry_wrap {
+  padding: 70px 20px 70px 80px;
+  min-height: 300px;
+  box-sizing: border-box;
+  border-radius: 80px 80px 0 80px;
+  background-color: #FA7D38;
+}
+.entry_wrap .entry_tit {
+  color: #171717;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "KIMM";
+}
+.entry_wrap .entry_txt {
+  margin-top: 8px;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "KIMM";
 }/*# sourceMappingURL=include.css.map */

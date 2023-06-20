@@ -27,12 +27,13 @@
     margin-bottom: 20px; 
   }
   li {
-    > a {
+    > a, button {
       display: block;
       width: 100%; 
       height: 100%;
     }
   }
+
   & .date {
     color: $gray_68;
     font: {
@@ -59,6 +60,72 @@
       size: 14px;
       weight: 700;
       family: $font_en;
+    }
+  }
+ }
+ &.course {
+  & li {
+    position: relative;
+    padding: 30px 20px;
+    > a, button {
+      display: block;
+      width: 100%;
+    }
+    strong {
+      display: block;
+      color: #fff;
+      text-align: right;
+      font: {
+        size: 32px;
+        weight: 700;
+        family: $font_kr;
+      }
+    }
+    &.word {
+      background-color: #6153FF;
+      &:after {
+        -webkit-mask-image: url($assets_icon + "book.svg");
+        mask-image: url($assets_icon + "book.svg");
+      }
+    }
+    &.exam {
+      background-color: $orange;
+      &:after {
+        -webkit-mask-image: url($assets_icon + "book_open.svg");
+        mask-image: url($assets_icon + "book_open.svg");
+      }
+    }
+    &.grade {
+      background-color: #F64848;
+      &:after {
+        -webkit-mask-image: url($assets_icon + "flag.svg");
+        mask-image: url($assets_icon + "flag.svg");
+      }
+    }
+  }
+  & li:after {
+    content: ''; 
+    @include position(
+      absolute,
+      $b: 30px,
+      $l: 20px
+    ); 
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: bottom left;
+  }
+  & li:nth-child(even) {
+    background-position: bottom right;
+    strong {
+      text-align: left;
+    }
+    &:after {
+      left: auto;
+      right: 20px;
     }
   }
  }
@@ -98,4 +165,32 @@
       color: #fff;
     }
   }
+}
+
+
+
+.entry_wrap {
+  padding: 70px 20px 70px 80px;
+  min-height: 300px;
+  box-sizing: border-box;
+  border-radius: 80px 80px 0 80px;
+  background-color: $orange;
+  .entry_tit {
+    color: $black;
+    font: {
+      size: 40px;
+      weight: 700;
+      family: $font_kr;
+    }
+  }
+  .entry_txt {
+    margin-top: 8px;
+    color: $black;
+    font: {
+      size: 16px;
+      weight: 300;
+      family: $font_kr;
+    }
+  }
+
 }
