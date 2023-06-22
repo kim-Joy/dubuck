@@ -225,4 +225,13 @@
   font-size: 16px;
   font-weight: 300;
   font-family: "KIMM";
+}
+
+.absolute_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: red;
 }/*# sourceMappingURL=item.css.map */

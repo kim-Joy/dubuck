@@ -5,10 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=1>
   <link rel="stylesheet" href="css/scss/include.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 <body>
-  <div>
+  <div class="body">
     <div class="entry_wrap">
       <h1 class="logo"><span class="visaullyhiden">Dubuck</span></h1>
       <h2 class="entry_tit">두벅 영워드</h2>
@@ -16,7 +18,7 @@
     </div>
     <section class="entry_base" style="padding: 0 20px;">
       <div class="dubuck"><span class="visaullyhiden">두벅이 캐릭커쳐</span></div>
-      <div class="attendance">
+      <div class="attendance sticky">
         <span class="tit">출석체크</span>
         <strong class="count"><em>1</em>일차</strong>
       </div>
@@ -97,5 +99,30 @@
       </li>
     </ul>
   </div>
+
+  <div class="modal_wrap tutorial" style="display: block;">
+    <div class="bubble_group">
+      <div class="bubble_hd">
+        <strong class="tit">두벅이와 함께</strong>
+        <button type="button" class="bubble_close"><span class="visuallyhidden">닫기</span></button>
+      </div>
+      <p class="text">출결관리를 통해 이달에 두벅이와 공부를 몇번 했는지 알 수 있습니다.</p>
+      <button type="button" class="btn_exit btn_small grape paint">다음</button>
+    </div>
+    <div class="dim"></div>
+  </div>
+  <style>
+  .sticky {position: sticky !important; z-index: 80;}
+  .bubble_group:after {content: ''; position: absolute; top: -10px; right: 50px; background-color: #fff; width: 10px; height: 10px; }
+.bubble_group {position: absolute; top: 50%; right: 0; z-index: 80; width: 100%; background-color: #fff; border-radius: 20px; padding: 20px 20px; box-sizing: border-box; }
+   
+  </style> 
 </body>
 </html>
+<script>
+  //배열에 각각의 아이템 변수로 할당
+  //아이템에 sticky 추가
+  //sticky 의 좌표를 구한다음
+  //bubble_group 의 위치값 계산
+  //bubble_group 화살표 가상요소도 수정
+</script>

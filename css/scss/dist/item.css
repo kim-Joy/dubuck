@@ -59,6 +59,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px 15px;
 }
 .dis_flex > li {
@@ -174,6 +175,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 10px 15px;
   margin-top: 5px;
   justify-content: space-between;
@@ -222,4 +224,13 @@
   font-size: 16px;
   font-weight: 300;
   font-family: "KIMM";
+}
+
+.absolute_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: red;
 }
