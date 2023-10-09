@@ -1,0 +1,8 @@
+<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow">
+<line id="Line 12" x1="1.48364" y1="4.85059" x2="14.5" y2="4.85059" stroke="white" stroke-linecap="round"/>
+<path id="Line 15" d="M10.3281 0.74071L14.5329 4.85052" stroke="white" stroke-linecap="round"/>
+<path id="Line 17" d="M9.86072 9.05147L14.5328 4.85034" stroke="white" stroke-linecap="round"/>
+<line id="Line 16" x1="0.5" y1="-0.5" x2="13.5164" y2="-0.5" transform="matrix(1 0 0 -1 0.0493164 4.35059)" stroke="white" stroke-linecap="round"/>
+</g>
+</svg>

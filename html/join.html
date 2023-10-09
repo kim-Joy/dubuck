@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/font_cdn.css">
+  <link rel="stylesheet" href="/css/main_common.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper join">
+    <header class="header">
+      <div class="title_box">
+        <button type="button" class="header_back"><span class="visuallyhidden">뒤로가기</span></button> 
+        <h2 class="header_title">회원가입</h2>
+      </div>
+    </header>
+    <div class="container">
+      <section class="login_form inner20">
+        <form action="">
+          <ul>
+            <li class="dis_grid">
+              <div class="form_dl">
+                <label for="user_first" placeholder="성">성</label>
+                <input type="text" id="user_first" class="form_input">
+              </div>
+              <div class="form_dl">
+                <label for="user_name" placeholder="이름">이름</label>
+                <input type="text" id="user_name" class="form_input">
+              </div>
+              <div class="mark">
+                <span>/</span>
+              </div>
+            </li>
+            <li class="dis_grid">
+              <div class="form_dl">
+                <label for="email" >이메일</label>
+                <input type="text" id="email" class="form_input">
+              </div>
+              <div class="form_dl email">
+                <div class="select_group">
+                  <button type="button" id="email02" class="select">
+                    <span>직접입력</span>
+                    <i class="arrow"></i>
+                  </button>
+                  <ul class="option_list">
+                    <li><button type="button" class="option">naver.com</button></li>
+                    <li><button type="button" class="option">hanmail.net</button></li>
+                    <li><button type="button" class="option">kakao.com</button></li>
+                    <li><button type="button" class="option">gmail.com</button></li>
+                    <li><label for="memo" class="option">직접입력</label></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mark">
+                <span>@</span>
+              </div>
+              <input type="text" id="memo" class="form_input memo" placeholder="직접입력해주세요." readonly>
+            </li>
+            <li class="form_dl full">
+              <label for="pw">비밀번호</label>
+              <input type="password" id="pw" class="form_input">
+              <p class="shown_msg">영문 + 숫자 조합 6자리 이상</p>
+            </li>
+            <li class="form_dl full">
+              <label for="pw_chk">비밀번호 확인</label>
+              <input type="password" id="pw_chk" class="form_input full">
+              <p class="error_msg">비밀번호가 다릅니다.</p>
+            </li>
+          </ul>
+          <section class="agree_cont">
+            <h3>약관동의 - 미작업</h3>
+            <ul>
+              <li class="checkbox">
+                <input type="checkbox" id="all_chk" class="chkbox_input">
+                <label for="all_chk">전체동의</label>
+              </li>
+              <li class="checkbox">
+                <label for="agree01">
+                  <input type="checkbox" id="agree01" class="chkbox_input">
+                  <span class="on"></span>
+                  <button type="button">이용약관 동의(필수)</button>
+                </label>
+                <button type="button" class="more arrow">약관보기</button>
+              </li>
+              <li class="checkbox">
+                <input type="checkbox" id="all_chk" class="chkbox_input">
+                <label for="all_chk">마케팅약관 동의(선택)</label>
+                <i class="more arrow"><span class="visuallyhidden">약관보기</span></i>
+              </li>
+            </ul>
+          </section>
+        </form>
+        <div class="button_group">
+          <button type="button" class="full btn h50 bg_fill">
+            <span class="btn_txt font18">가입하기</span>
+          </button>
+        </div>
+      </section>
+    </div>
+    <footer>
+
+    </footer>
+  </div>
+</body>
+
+</html>
