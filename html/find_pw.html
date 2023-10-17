@@ -56,6 +56,25 @@
               </div>
               <input type="text" id="memo" class="form_input memo" placeholder="직접 입력해주세요." readonly>
             </li>
+            <li>
+              <input type="text" placeholder="인증번호">
+              <button type="button">인증번호 확인</button>
+              <p class="shown_msg">인증번호가 발송되었습니다.<br>
+                발급된 인증번호를 입력하세요.</p>
+              <p class="error_msg">인증번호가 일치하지 않습니다.</p>
+            </li>
+          </ul>
+          <ul class="change_form" style="display: none; ">
+            <li class="form_dl full">
+              <label for="pw">비밀번호 수정</label>
+              <input type="password" id="pw" class="form_input">
+              <p class="shown_msg">영문 + 숫자 조합 6자리 이상</p>
+            </li>
+            <li class="button_group">
+              <button type="button" class="full btn h50 bg_fill">
+                <span class="btn_txt font18">비밀번호 변경</span>
+              </button>
+            </li>
           </ul>
         </form>
         <div class="button_group">
@@ -69,24 +88,6 @@
 
     </footer>
   </div>
-
-
-
-  
-<div class="layer confrim">
-  <div class="layer_cont">
-    <div class="layer_body">
-      <p>
-        등록된 이메일이 없습니다.<br>회원가입 후 이용하세요.
-      </p>
-    </div>
-    <div class="layer_foot">
-      <button type="button" class="btn h40 bg_fill">
-        <span class="btn_txt font18">확인</span>
-      </button>
-    </div>
-  </div>
-</div>
 </body>
 </html>
 

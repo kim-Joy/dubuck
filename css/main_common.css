@@ -4,6 +4,7 @@
 body { font-weight: var(--Font-w300); font-size: var(--Font-size14); font-family: var(--Font-Kr); color: var(--Color-dark-17); }
 ol,ul,li {list-style: none; }
 button {all: unset; text-align: center; }
+a {text-decoration: none;}
 
 /* font */
 :root {
@@ -51,6 +52,12 @@ button {all: unset; text-align: center; }
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center center; mask-position: center center; -webkit-mask-size: contain; mask-size: contain;
 }
 
+.x {
+  -webkit-mask-image: url("/html/assets/btn_x.svg"); 
+  mask-image: url("/html/assets/btn_x.svg"); 
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center center; mask-position: center center; -webkit-mask-size: contain; mask-size: contain;
+}
+
 /* ============================================
 layout 
 ===============================================*/
@@ -69,7 +76,7 @@ layout
   background-color: var(--Color-dark-17);
   -webkit-mask-image: url("/html/assets/header_back.svg"); 
   mask-image: url("/html/assets/header_back.svg"); 
-  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center center; mask-position: center center; -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: left center; mask-position: left center; -webkit-mask-size: 7px 10px; mask-size: 7px 10px;
 }
 .header .header_title {font-weight: var(--Font-w300); font-size: var(--Font-size18); }
 
@@ -136,10 +143,10 @@ input:disabled, input.disabled {background-color: var(--Color-gray-f1); border-c
 
 .form_dl label {display: block; width: 100%; margin-bottom: 8px; padding: 0 2px; color: var(--Color-dark-17); font-weight: normal; font-size: var(--Font-size14); text-align: left; }
 .form_input {width: 100%; height: var(--h50); padding: 0 16px; box-sizing: border-box; border-radius: var(--Border-raidus5); border: 1px solid var(--Color-gray-e2); background-color: var(--Color-white); line-height: 48px; }
-.form_input + .error_msg {padding: 2px; font-size: var(--Font-size10); line-height: 1.5; color: var(--Color-red-f8); }
+.form_input + .error_msg {padding: 2px 4px 0; font-size: var(--Font-size10); line-height: 1.5; color: var(--Color-red-f8); }
 .form_input:has(~ .error_msg) {border-color: var(--Color-main); }
 .form_input.full {width: 100%; }
-.shown_msg {padding: 2px; font-size: var(--Font-size10); line-height: 1.5; color: var(--Color-gray-68);}
+.shown_msg {padding: 2px 4px 0; font-size: var(--Font-size10); line-height: 1.5; color: var(--Color-gray-68);}
 
 /*
 .form_dl input:placeholder-shown + .shown_msg {
@@ -196,7 +203,14 @@ loin css
 ====================================*/
 
 .big_banner {position: relative; padding: 60px 40px 120px 60px; box-sizing: border-box; border-top-left-radius: var(--Border-radius80); border-top-right-radius: var(--Border-radius80); border-bottom-left-radius: var(--Border-radius80); background-color: var(--Color-main);}
-.big_banner .logo {}
+.big_banner .logo {
+  display: block;
+  width: 50px; height: 26px; 
+  background-image: url(/html/assets/logo.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 .big_banner h2 {color: var(--Color-dark-17); font-size: var(--Font-size40); font-weight: var(--Font-w700); }
 .big_banner p {margin-top: 8px; color: var(--Color-dark-17); font-size: var(--Font-size16); }
 .big_banner img {position: absolute; bottom: -54px; left: 47px; }
@@ -206,11 +220,13 @@ loin css
 
 .login .slider_wrap {padding-top: 32px; }
 
+.login .login_into {position: absolute; top: 0; left: 0; width: 100%; }
+.login .login_into .button_group {padding-top: 0; }
 
 /* login form 노출효과 */
 .slider_wrap {max-width: 1200px; overflow: hidden; margin: 0 auto; }
-.slide_list {white-space: nowrap; font-size: 0;}
-.slide_list > li {display: inline-block;  vertical-align:middle;width:100%;transition:all .5s;}
+.slide_list {position: relative; white-space: nowrap; font-size: 0;}
+.slide_list > li {display: inline-block;  vertical-align:top;width:100%;transition:all .5s;}
 
 
 input[id="slide"]:checked ~ .slider_wrap .slide_list > li {transform:translateX(-100%);}
@@ -243,29 +259,31 @@ input[id="slide"]:checked ~ .slider_wrap .slide_list > li {transform:translateX(
 .policy_cont .depth_category li {margin-top: 24px;}
 .policy_cont .depth_category p {margin-top: 4px; color: var(--Color-gray-68); font-size: var(--Font-size10); line-height: 1.5; font-weight: var(--Font-w300)}
 
+.policy_cont {height: calc(100vh - 160px); overflow-y: auto; overflow-x: hidden; }
+.policy_cont + .button_group {margin-top: 0; padding-top: 20px; } 
 
 /* ===================================
   confrim 
 ====================================*/
-.layer {position:fixed; top:0; left: 0; width: 100%; height: 100%; backdrop-filter: brightness(40%)}
+.dialog {width: 100%; margin: auto; padding: 0 20px 20px; box-sizing: border-box; border: 0; border-radius: var(--Border-raidus5);background-color: var(--Color-white);}
+dialog::backdrop {background-color: rgba(0,0,0,0.5);}
 
-.layer .layer_cont {position: absolute; top: 50%; left: 50%; width: calc(100% - 40px); padding: 0 20px 20px; box-sizing: border-box; border-radius: var(--Border-raidus5); background-color: var(--Color-white); transform: translate(-50%, -50%); }
+.dialog .dialog_header .dialog_close {position: absolute; top: 8px; right: 20px; width: 30px; height: 30px; -webkit-mask-size: 10px 10px; mask-size: 10px 10px; background-color: var(--Color-dark-17); }
+.dialog .dialog_body {padding-top: 40px; text-align: center; }
 
-.layer .layer_body {padding-top: 40px; text-align: center; }
+.dialog .dialog_foot {display: flex; justify-content: space-evenly; gap: 0 8px; margin-top: 50px; }
+.dialog .dialog_foot .btn {width: 100%; border-radius: var(--Border-radius20);}
+.dialog .dialog_foot .btn.h40 {height: var(--h40);}
+.dialog .dialog_foot .btn.h40  .btn_txt {font-size: var(--Font-size14)}
 
-.layer .layer_foot {display: flex; justify-content: space-evenly; gap: 0 8px; margin-top: 50px; }
-.layer .layer_foot .btn.h40 {height: var(--h40);}
-.layer .layer_foot .btn.h40  .btn_txt {font-size: var(--Font-size14)}
-
-.layer .layer_foot .btn {width: 100%; border-radius: var(--Border-radius20);}
-.layer .layer_foot .btn + .btn {background-color: var(--Color-gray-f1); }
-
-.layer .layer_foot .btn + .btn > .btn_txt {color: var(--Color-gray-68); }
+.dialog .dialog_foot .btn + .btn {background-color: var(--Color-gray-f1); }
+.dialog .dialog_foot .btn + .btn > .btn_txt {color: var(--Color-gray-68); }
 
 
-.confrim .layer_header {height: 50px; }
-.confrim .layer_header h2 {padding-top: 15px; color: var(--Color-dark-17); font-size: var(--Font-size18); font-weight: var(--Font-w700); }
-.confrim .layer_foot .btn {max-width: 140px; }
+/* 컨피그 */
+.confrim .dialog_header {height: 50px; }
+.confrim .dialog_header h2 {padding-top: 15px; color: var(--Color-dark-17); font-size: var(--Font-size18); font-weight: var(--Font-w700); }
+.confrim .dialog_foot .btn {max-width: 140px; }
 
 /* ================================== 
 join css 
@@ -273,8 +291,7 @@ join css
 .agree_cont {margin-top: 24px; }
 .agree_cont > h3 {margin-bottom: 8px; font-size: var(--Font-size14); color: var(--Color-dark-17); font-weight: var(--Font-w300);}
 
-
-/* checkbox */
+/* checkbox  */
 .checkbox {position: relative; display: block; padding-left: 26px; cursor: pointer;  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 .checkbox label {font-size: var(--Font-size12); color: var(--Color-dark-17);}
 .checkbox .chkbox_input {display: none; } 
@@ -282,11 +299,11 @@ join css
 
 /* 선택되지 않은 체크박스 스타일 꾸미기 */
 .checkbox .on {position: absolute; top: 2px; left: 0; width: 20px; height: 20px; box-sizing: border-box; border: 1px solid var(--Color-gray-e2); border-radius: 0; background: var(--Color-white);  }
-.checkbox .on:after {content: ''; position: absolute; top: 4px; left: 3px; width: 8px; height: 4px; transform: rotate(-45deg);}
+.checkbox .on:after {content: ''; position: absolute; top: 4px; left: 3px; width: 8px; height: 4px; transform: rotate(-45deg);}  
 
 /* 선택된 체크박스 스타일 꾸미기 */
 .checkbox .chkbox_input:checked + .on {background-color: red;}
-.checkbox .chkbox_input:checked + .on:after {border-color: var(--Color-main); }
+.checkbox .chkbox_input:checked + .on:after {border-color: var(--Color-main); } 
 
 
 
