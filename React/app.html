@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<link rel="stylesheet" href="/css/font_cdn.css">
+<link rel="stylesheet" href="/css/main_common.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
+
+
+<script type="text/babel"> 
+function Header(){
+  return(
+    <header className="header">
+      <HdPage />
+    </header>
+  );
+
+}
+
+function HdLogo(){
+  return(
+    <div className="logo_box">
+      <a href="#">
+        <h1 className="logo"><span className="visuallyhidden">두벅이</span></h1>
+      </a>
+    </div>
+  );
+
+}
+
+function HdPage() {
+  return(
+    <div className="title_box">
+      <button type="button" className="header_back">
+        <span className="visuallyhidden">뒤로가기</span>
+      </button>
+      <HdTitle />
+    </div>
+  )
+}
+
+function HdTitle(){
+  return(
+    <h2 className="header_title"
+    >
+      타이틀
+    </h2>
+  );
+}
+
+function Main(){
+  return(
+    <section className="big_banner">
+      <h1 class="logo">
+        <span class="visuallyhidden">두벅이</span>
+      </h1>
+      <h2>두벅 영워드</h2>
+      <p>차 없는 나는 두벅이, 두벅두벅 걸어가면서 공부하는 영단어</p>
+      <img src="/html/assets/dubuck.png" alt="두벅이 이미지" />
+    </section>
+  );
+}
+
+function Container(){
+  return(
+    <div className="container">
+      <Main />
+    </div>
+  );
+}
+
+function App() {
+  return(
+    <div id="wrapper">
+      <Header />
+      <Container />
+    </div>
+  );
+}; //End App
+
+
+const root = document.getElementById('root');
+ReactDOM.render(<App />, root);
+</script>
