@@ -20,73 +20,75 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="wrapper find_pw">
-    <header class="header">
-      <div class="title_box">
-        <button type="button" class="header_back"><span class="visuallyhidden">뒤로가기</span></button> 
-        <h2 class="header_title">비밀번호 찾기</h2>
-      </div>
-    </header>
-    <div class="container">
-      <section class="login_form inner20">
-        <form action="">
-          <ul>
-            <li class="dis_grid">
-              <div class="form_dl">
-                <label for="email" >이메일</label>
-                <input type="text" id="email" class="form_input">
-              </div>
-              <div class="form_dl email">
-                <div class="select_group">
-                  <button type="button" id="email02" class="select">
-                    <span>직접입력</span>
-                    <i class="arrow"></i>
-                  </button>
-                  <ul class="option_list">
-                    <li><button type="button" class="option">naver.com</button></li>
-                    <li><button type="button" class="option">hanmail.net</button></li>
-                    <li><button type="button" class="option">kakao.com</button></li>
-                    <li><button type="button" class="option">gmail.com</button></li>
-                    <li><label for="memo" class="option">직접입력</label></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mark">
-                <span>@</span>
-              </div>
-              <input type="text" id="memo" class="form_input memo" placeholder="직접 입력해주세요." readonly>
-            </li>
-            <li class="certify_form">
-              <input type="text" class="certify_input" placeholder="인증번호"  max="6">
-              <button type="button"  class="certify_btn">인증번호 확인</button>
-              <p class="msg shown_msg">인증번호가 발송되었습니다.<br>
-                발급된 인증번호를 입력하세요.</p>
-              <p class="msg error_msg" style="display:none;" >인증번호가 일치하지 않습니다.</p>
-            </li>
-          </ul>
-          <ul class="change_form">
-            <li class="form_dl full">
-              <label for="pw">비밀번호 수정</label>
-              <input type="password" id="pw" class="form_input">
-              <p class="shown_msg">영문 + 숫자 조합 6자리 이상</p>
-            </li>
-            <li class="button_group">
-              <button type="button" class="full btn h50 bg_fill">
-                <span class="btn_txt font18">비밀번호 변경</span>
-              </button>
-            </li>
-          </ul>
-        </form>
-        <div class="button_group">
-          <button type="button" class="full btn h50 bg_fill">
-            <span class="btn_txt font18">인증번호 발송</span>
-          </button>
+  <div id="root">
+    <div id="wrapper" class="find_pw">
+      <header class="header">
+        <div class="title_box">
+          <button type="button" class="header_back"><span class="visuallyhidden">뒤로가기</span></button> 
+          <h2 class="header_title">비밀번호 찾기</h2>
         </div>
-      </section>
-    </div>
-    <footer>
+      </header>
+      <div class="container">
+        <section class="login_form inner20">
+          <form action="">
+            <ul>
+              <li class="dis_grid">
+                <div class="form_dl">
+                  <label for="email" >이메일</label>
+                  <input type="text" id="email" class="form_input">
+                </div>
+                <div class="form_dl email">
+                  <div class="select_group">
+                    <button type="button" id="email02" class="select">
+                      <span>직접입력</span>
+                      <i class="arrow"></i>
+                    </button>
+                    <ul class="option_list">
+                      <li><button type="button" class="option">naver.com</button></li>
+                      <li><button type="button" class="option">hanmail.net</button></li>
+                      <li><button type="button" class="option">kakao.com</button></li>
+                      <li><button type="button" class="option">gmail.com</button></li>
+                      <li><label for="memo" class="option">직접입력</label></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mark">
+                  <span>@</span>
+                </div>
+                <input type="text" id="memo" class="form_input memo" placeholder="직접 입력해주세요." readonly>
+              </li>
+              <li class="certify_form">
+                <input type="text" class="certify_input" placeholder="인증번호"  max="6">
+                <button type="button"  class="certify_btn">인증번호 확인</button>
+                <p class="msg shown_msg">인증번호가 발송되었습니다.<br>
+                  발급된 인증번호를 입력하세요.</p>
+                <p class="msg error_msg" style="display:none;" >인증번호가 일치하지 않습니다.</p>
+              </li>
+            </ul>
+            <ul class="change_form">
+              <li class="form_dl full">
+                <label for="pw">비밀번호 수정</label>
+                <input type="password" id="pw" class="form_input">
+                <p class="shown_msg">영문 + 숫자 조합 6자리 이상</p>
+              </li>
+              <li class="button_group">
+                <button type="button" class="full btn h50 bg_fill">
+                  <span class="btn_txt font18">비밀번호 변경</span>
+                </button>
+              </li>
+            </ul>
+          </form>
+          <div class="button_group">
+            <button type="button" class="full btn h50 bg_fill">
+              <span class="btn_txt font18">인증번호 발송</span>
+            </button>
+          </div>
+        </section>
+      </div>
+      <footer>
 
-    </footer>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
