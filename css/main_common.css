@@ -76,7 +76,7 @@ layout
 }
 
 #root {background-color: #f7f8f9; }
-#wrapper {display: grid; align-content: stretch; align-items: start; max-width: 375px; margin: 0 auto; border-left: 1px solid red; border-right: 1px solid red; background-color: var(--Color-white); }
+#wrapper {display: grid; align-content: stretch; align-items: stretch; max-width: 375px; margin: 0 auto; box-shadow:rgba(0, 0, 0, 0.16) 0px 0px 8px; background-color: var(--Color-white); }
 
 .header {width: 100%; height: 50px; padding: 0 20px; box-sizing: border-box;}
 .header .title_box {display: flex; height: 100%; flex-wrap: wrap;  justify-content: flex-start; align-items: center; gap: 0 12px; }
@@ -89,7 +89,7 @@ layout
   -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: left center; mask-position: left center; -webkit-mask-size: 7px 10px; mask-size: 7px 10px;
 }
 .header .header_title {font-weight: var(--Font-w300); font-size: var(--Font-size18); }
-
+.container {align-self: stretch; }
 .container > section:first-child:not(.big_banner) {padding-top: 20px; }
 /* ============================================
 common 
@@ -376,3 +376,15 @@ find pw
 .category li.word {background-color: var(--Color-purple-61); background-image: url('/html/assets/book.svg')}
 .category li.exam {background-color: var(--Color-main); background-image: url('/html/assets/exam.svg')}
 .category li.result {background-color: var(--Color-red-f6); background-image: url('/html/assets/flag.svg')}
+
+
+
+
+
+
+
+
+/* fance */
+.fance_wrap {}
+.fance_x {height: calc(100vh - 97px); padding-top: 106px; background-color: var(--Color-main); background-image: url('/html/assets/dubuck.png'); background-repeat: no-repeat; background-position: top center;text-align: center; background-size: 158px 120px;}
+.fance_o {height: calc(100vh - 97px); padding-top: 106px; box-sizing: border-box; border-top-left-radius: var(--Border-radius80); border-top-right-radius: var(--Border-radius80); background-color: var(--Color-main);  }
