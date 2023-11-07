@@ -20,14 +20,31 @@
         <div class="fance_wrap">
           <div class="fance">
             <div class="questions">
-              <input type="number" class="questions_input">
-              <span>단어</span>
+              <span>오늘은</span>
+              <input type="number" class="questions_input" placeholder="?" maxlength="3">
+              <span>문항으로</span>
+              <p>챌린지를 시작해볼까?</p>
             </div>
-            <p>공부해볼까?</p>
+            <strong class="tit" style="display: none">
+              수고하셨습니다.<br>
+              오늘도 힘차게 두벅!
+            </strong>
+            <strong class="tit"  style="display: none">
+              챌린지가<br>
+              완료 되었습니다.
+            </strong>
+            <p class="desc" style="display: none">
+              김두벅님 챌린지 도전은 <em>1</em>번째 입니다.<br>
+              앞으로의 성장이 기대됩니다.
+            </p>
             <div class="button_group">
-              <button type="button" class="h60 bg_fill full">
-                <span class="uppercase">START</span>
+              <!-- button type="button" class="btn h60 border_fill full">
+                <span class="font18 btn_txt">단어복습</span>
+              </button --> 
+              <button type="button" class="btn h60 bg_fill full">
+                <span class="font18 btn_txt uppercase">점수 확인하기</span>
               </button>
+
             </div>
           </div>
         </div>
