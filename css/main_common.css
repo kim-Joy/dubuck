@@ -8,6 +8,7 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {-moz-appearance:none;-webkit-appearance:none;appearance:none;}
 a {text-decoration: none; color: inherit}
 em {font-style:normal; }
+button {cursor: pointer; } 
 
 /* font */
 :root {
@@ -79,7 +80,7 @@ layout
 }
 
 #root {background-color: #f7f8f9; }
-#wrapper {display: grid; align-content: stretch; align-items: stretch; max-width: 375px; margin: 0 auto; box-shadow:rgba(0, 0, 0, 0.16) 0px 0px 8px; background-color: var(--Color-white); }
+#wrapper {display: grid; align-content: stretch; align-items: stretch; width: 100%; margin: 0 auto; box-shadow:rgba(0, 0, 0, 0.16) 0px 0px 8px; background-color: var(--Color-white); }
 
 .header {width: 100%; height: 50px; padding: 0 20px; box-sizing: border-box;}
 .header .title_box {display: flex; height: 100%; flex-wrap: wrap;  justify-content: flex-start; align-items: center; gap: 0 12px; }
@@ -368,15 +369,15 @@ find pw
 
 
 /* main */
-.calendar {position: relative; display: flex; flex-wrap: wrap; justify-content: flex-end; margin-top: -80px; }
-.calendar .box {display: block; width: 160px; height: 160px; padding: 50px 20px 0; box-sizing: border-box; background-color: var(--Color-dark-24); border-radius: var(--Border-radius20);} 
+.calendar {position: relative; display: flex; flex-wrap: wrap; justify-content: flex-end; margin-top: -80px; container: category_item / inline-size;}
+.calendar .box {display: block; max-width: 160px; width: 100%; max-height: 160px; aspect-ratio: 1/1; padding: 50px 20px 0; box-sizing: border-box; background-color: var(--Color-dark-24); border-radius: var(--Border-radius20);} 
 
 .calendar:before {content: ''; display: block; position: absolute; top: -14px; right: 0; width: 160px; height: 40px; z-index: 1; background-image:url(/html/assets/calendar_hd.svg); background-repeat: no-repeat; background-size: 100% auto; background-position: top left; }
 .calendar p {font-size: 14px; color: #fff; }
 .calendar .count {display:block; margin-top: 15px; font-size: 32px; color: #fff; font-weight: var(--Font-w700); }
 
-.category {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 0px; margin-top: 16px; }
-.category li {width: 160px; height: 160px; aspect-ratio: 1/1; padding: 30px 20px; border-radius: var(--Border-radius20); box-sizing: border-box; background-repeat: no-repeat; background-size: 24px 24px; background-position: bottom 30px left 20px; color: var(--Color-white); text-align: right; font-size: 32px; text-wrap: wrap; font-weight: var(--Font-w700); line-height: 1.2; }
+.category {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 8px; margin-top: 16px; container: category_item / inline-size; }
+.category li {max-width: 160px; width: 100%; max-height: 160px; aspect-ratio: 1/1; padding: 30px 20px; border-radius: var(--Border-radius20); box-sizing: border-box; background-repeat: no-repeat; background-size: 24px 24px; background-position: bottom 30px left 20px; color: var(--Color-white); text-align: right; font-size: 32px; text-wrap: wrap; font-weight: var(--Font-w700); line-height: 1.2; word-break: keep-all;}
 .category li:nth-child(even) {text-align: left; background-position: bottom 30px right 20px;}
 .category li a {display: block; width: 100%; height: 100%; }
 .category li.word {background-color: var(--Color-purple-61); background-image: url('/html/assets/book.svg')}
@@ -384,6 +385,25 @@ find pw
 .category li.result {background-color: var(--Color-red-f6); background-image: url('/html/assets/flag.svg')}
 
 
+@container category_item (max-width: 325px) {
+  .calendar .box {
+    width: calc(50% - 8px);
+  }
+  .category li{ 
+    width: calc(50% - 8px);
+  }; 
+}
+@container category_item (max-width: 302px) {
+  .calendar p {
+    font-size: 12px;
+  }
+  .calendar .count {
+    font-size: 24px;
+  }
+  .category li{
+    font-size: 24px;
+  }; 
+}
 
 
 
@@ -465,18 +485,31 @@ find pw
 
 
 /* ploating */
-.ploating {position: relative; }
+.ploating {position: relative; z-index: 100; width: 100%; height: 100%; }
+.ploating.show {position: fixed; top: 0; left: 50%; transform: translateX(-50%); }
+.ploating_ab {position: absolute; bottom: 30px; left: 0; z-index: 120; width: 100%; }
+.backdrop {display: none; position: absolute; top: 0; left: 0; z-index: 110; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); }
+.ploating_more {width: 50px; height: 50px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); box-shadow: 1px 3px 7px 2px #fa7d3878;}
 
-.ploating_more {width: 50px; height: 50px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); box-shadow: 1px 3px 7px 2px var(--Color-main);}
-
-
-.ploating_list {display: flex; flex-wrap: wrap; gap: 10px 0; }
+.ploating_list {display: flex; flex-wrap: wrap; gap: 10px 0; padding: 0 20px;}
 .ploating_list.hide {display:none; }
 .ploating_list li {flex-basis: 100%; text-align: right; font-size: 12px; color: var(--Color-white);  font-weight: var(--Font-w700); }
 .ploating_list li {display: flex; flex-wrap: wrap; justify-content: flex-end;align-items: center; gap: 0 8px; }
-.ploating_list li:not(li:last-child) {display: none;  }
-.ploating_list.show li {display: flex !important; }
-.ploating_btn {width: 45px; height: 45px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); background-repeat: no-repeat; background-position: center center; background-size: 20px 20px; box-shadow: 1px 3px 7px 2px var(--Color-main); }
+.ploating_list li:not(li:last-child) {display: none;}
+.ploating_btn {width: 45px; height: 45px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); background-repeat: no-repeat; background-position: center center; background-size: 20px 20px; box-shadow: 1px 3px 7px 2px #fa7d3878; }
 .ploating_btn.delete {background-image: url('/html/assets/trash.svg'); }
 .ploating_btn.word {background-image: url('/html/assets/book.svg'); }
 .ploating_btn.challenge {background-image: url('/html/assets/history.svg'); }
+
+
+
+/* ploatin show */
+.ploating.show .ploating_list li {display: flex !important; }
+.ploating.show .backdrop {display: block; }
+
+
+
+@media (min-width: 425px) {
+  #wrapper ,
+.ploating  {max-width: 375px; }
+}
