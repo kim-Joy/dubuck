@@ -10,7 +10,7 @@
 </head>
 <body>
   <div id="root">
-    <div id="wrapper" class="challenge">
+    <div id="wrapper" class="challenge list">
       <header class="header">
         <div class="title_box">
           <button type="button" class="header_back"><span class="visuallyhidden">뒤로가기</span></button> 
@@ -19,136 +19,89 @@
       </header>
       <div class="container">
         <div class="inner20">
-          <div class="utill">
-            <p>2023.06.20</p>
-            <div class="select_group">
-              <button type="button" id="sort" class="select">
-                <span>전체</span>
-                <i class="arrow"><span class="visuallyhidden">화살표</span></i>
-              </button>
-              <ul class="option_list">
-                <li><button type="button" class="option">전체</button></li>
-                <li><button type="button" class="option">정답만</button></li>
-                <li><button type="button" class="option">오답만</button></li>
+          <section class="today_section">
+            <h3>Today</h3>
+            <div class="swiper">
+              <ul class="card_list">
+                <li>
+                  <a href="#">
+                    <p class="date">2023.04.27</p>
+                    <strong class="num">17</strong>
+                    <p class="perfect">perfect</p>
+                    <div class="item">
+                      <span>정답수</span>
+                      <span class="count answer">100</span>
+                      <span>오답수</span>
+                      <span class="count">100</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="date">2023.04.27</p>
+                    <strong class="num">16</strong>
+                    <p class="perfect">perfect</p>
+                    <div class="item">
+                      <span>정답수</span>
+                      <span class="count answer">100</span>
+                      <span>오답수</span>
+                      <span class="count">100</span>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </div>
-          </div>
-          <ul class="result_list">
-            <li>
-              <div class="q_item">
-                <strong class="en">exist</strong>
-                <p class="ex">존재하다</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item wrong">
-                <strong class="en"></strong>
-                <p class="ex">살아있다</p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">extreme</strong>
-                <p class="ex">극단</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item wrong">
-                <strong class="en">extremes</strong>
-                <p class="ex"></p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">original</strong>
-                <p class="ex">원래의</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item">
-                <strong class="en">ORIGINAL</strong>
-                <p class="ex"></p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">soon a after</strong>
-                <p class="ex">곧이어</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item">
-                <strong class="en"></strong>
-                <p class="ex">곧이어</p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">soon a after</strong>
-                <p class="ex">곧이어</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item">
-                <strong class="en"></strong>
-                <p class="ex">곧이어</p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">put aside</strong>
-                <p class="ex">~을 한쪽에 두다</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item">
-                <strong class="en"></strong>
-                <p class="ex">을 한쪽에두다</p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">critical</strong>
-                <p class="ex">비판적인</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item wrong">
-                <strong class="en">criticalnal</strong>
-                <p class="ex"></p>
-              </div>
-            </li>
-            <li>
-              <div class="q_item">
-                <strong class="en">mistakenly</strong>
-                <p class="ex">잘못(하여)</p>
-                <button type="button" class="listen"><span class="visuallyhidden">발음듣기</span></button>
-              </div>
-              <div class="my_item wrong">
-                <strong class="en">미스테이크</strong>
-                <p class="ex"></p>
-              </div>
-            </li>
-          </ul>
+          </section>
+          <section class="record_section">
+            <h3>Record</h3>
+            <div class="swiper">
+              <ul class="card_list">
+                <li>
+                  <a href="#">
+                    <p class="date">2023.03.28</p>
+                    <strong class="num">15</strong>
+                    <p class="perfect"></p>
+                    <div class="item">
+                      <span>정답수</span>
+                      <span class="count answer">10</span>
+                      <span>오답수</span>
+                      <span class="count">8</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="date">2023.03.28</p>
+                    <strong class="num">14</strong>
+                    <p class="perfect">perfect</p>
+                    <div class="item">
+                      <span>정답수</span>
+                      <span class="count answer">10</span>
+                      <span>오답수</span>
+                      <span class="count">10</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <p class="date">2023.03.01</p>
+                    <strong class="num">13</strong>
+                    <p class="perfect"></p>
+                    <div class="item">
+                      <span>정답수</span>
+                      <span class="count answer">10</span>
+                      <span>오답수</span>
+                      <span class="count">40</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
       </div> <!-- E: container -->
       <footer>
       </footer>
-      <aside class="ploating">
-        <div class="ploating_ab">
-          <ul class="ploating_list">
-            <li>
-              <span>삭제</span>
-              <button type="button" class="ploating_btn delete"><span class="visuallyhidden">삭제</span></button>
-            </li>
-            <li>
-              <span>단어 복습</span>
-              <button type="button" class="ploating_btn word"><span class="visuallyhidden">단어 복습</span></button>
-            </li>
-            <li>
-              <span>챌린지 재 도전</span>
-              <button type="button" class="ploating_btn challenge"><span class="visuallyhidden">챌린지 재 도전</span></button>
-            </li>
-            <li>
-              <button type="button" class="ploating_more"><span class="visuallyhidden">더보기</span></button>
-            </li>
-          </ul>
-        </div>
-        <div class="backdrop"><span class="visuallyhidden">검은배경</span></div>
-      </aside>
     </div>
   </div>
 

@@ -18,6 +18,7 @@ button {cursor: pointer; }
   --Color-purple-3f: #3F34C0;
   --Color-purple-61: #6153FF;
   --Color-purple-65: #6558F5;
+  --Color-red-EC : #EC1E1E;
   --Color-red-f8 : #F82D2D;
   --Color-red-f6 : #F64848;
   --Color-dark-17: #171717;
@@ -26,11 +27,13 @@ button {cursor: pointer; }
   --Color-gray-68: #686868;
   --Color-gray-8a: #8A8A8A;
   --Color-gray-e2: #E2E2E2;
+  --Color-gray-f2: #F2F2F2;
   --Color-gray-f1: #F1F1F1;
 
   /* border */
   --Border-radius80: 80px;
   --Border-radius20: 20px;
+  --Border-raidus6: 6px; 
   --Border-raidus5: 5px; 
 
   /* size */
@@ -73,8 +76,8 @@ button {cursor: pointer; }
 layout 
 ===============================================*/
 
-.inner40 {box-sizing: border-box; padding: 0 40px; }
-.inner20 {box-sizing: border-box; padding: 0 20px; }
+.inner40 {width: 100%; height: 100%; box-sizing: border-box; padding: 0 40px; }
+.inner20 {width: 100%; height: 100%; box-sizing: border-box; padding: 0 20px; }
 
 .visuallyhidden {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; white-space: nowrap; -webkit-clip-path: inset(100%); clip-path: inset(100%); clip: rect(0, 0, 0, 0); overflow: hidden;
 }
@@ -120,8 +123,10 @@ common
 
 
 .btn.full {width: 100%; }
+.btn.h40 {height: var(--h40); }
 .btn.h50 {height: var(--h50); box-sizing: border-box; border-radius: var(--Border-radius20); font-size: 18px; line-height: 48px; }
 .btn.h60 {height: var(--h60); box-sizing: border-box; border-radius: var(--Border-radius20); font-size: 18px; line-height: 58px;}
+
 
 .btn_txt {display: block; text-align: center; }
 .btn_txt.bold {font-weight: var(--Font-w700); }
@@ -202,7 +207,7 @@ input:disabled, input.disabled {background-color: var(--Color-gray-f1); border-c
   transform: translateY(-50%);
 }
 .option_list {display: none; position: absolute; left: 0; z-index: 1; width: 100%; height: auto; max-height: 120px; box-sizing: border-box; border: 1px solid var(--Color-gray-e2); border-radius: var(--Border-raidus5); background-color: var(--Color-white); overflow-x: hidden; overflow-y: auto; }
-.option_list .option {display: block; padding: 8px 16px; color: var(--Color-dark-68); font-size: var(--Font-size12); font-weight: var(--Font-w300); }
+.option_list .option {display: block; padding: 8px 16px; color: var(--Color-gray-68); font-size: var(--Font-size12); font-weight: var(--Font-w300); }
 .option_list .option:hover,
 .option_list .option.active  {color:var(--Color-main); }
 
@@ -359,7 +364,7 @@ join css
 find pw
 =============================== */
 .certify_form {display: flex; flex-wrap: wrap; margin-top: 8px; }
-.certify_form .certify_input {max-width: 120px; height: var(--h50); padding: 0 15px; box-sizing: border-box; border: 1px solid var(--Color-gray-8a); border-radius: var(--Border-raidus5); line-height: 48px; font-family: var(--Font-En); color: var(--Color-dark-17); }
+.certify_form .certify_input {max-width: 120px; height: var(--h50); padding: 0 15px; box-sizing: border-box; border: 1px solid var(--Color-gray-e2s); border-radius: var(--Border-raidus5); line-height: 48px; font-family: var(--Font-En); color: var(--Color-dark-17); }
 .certify_form .certify_btn {width: calc(100% - 128px); margin-left: 8px; height: var(--h50); box-sizing: border-box; background-color: var(--Color-gray-49); border-radius: var(--Border-raidus5); line-height: 48px; color: var(--Color-white); font-size: 14px; font-weight: var(--Font-w300); }
 .certify_form .msg {margin-top: 4px; text-align: right; flex-grow: 1 }
 .certify_form .error_msg {padding: 2px 4px 0; font-size: var(--Font-size10); line-height: 1.5; color: var(--Color-red-f8);}
@@ -461,9 +466,32 @@ find pw
 
 
 
+/* ========================================
+ 챌린지 결과
+========================================== */
+.challenge.list section {  }
+.challenge.list section + section {margin-top: 80px; }
+.challenge.list section > h3 {margin-bottom: 10px; color: var(--Color-dark-17); font-size: 18px; font-weight: var(--Font-w700); font-family: var(--Font-En); }
 
+.card_list {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 8px; container: card_item / inline-size;}
+.card_list li { max-width: 160px; width: 100%; max-height: 160px; aspect-ratio: 1/1; padding: 15px 20px 20px; box-sizing: border-box; border-radius: var(--Border-radius20); box-shadow:2px 4px 4px 0px rgba(0, 0, 0, 0.05) inset, -2px -4px 4px 0px rgba(0, 0, 0, 0.05) inset; background-color: var(--Color-white);} 
+.card_list li > a {display: grid; justify-items: stretch; align-items: center; font-family: var(--Font-En); }
+.card_list .date {font-size: 12px; color: var(--Color-dark-17); }
+.card_list .num {font-size: 32px; color: var(--Color-dark-17); font-weight: var(--Font-w700); letter-spacing: -4px;}
+.card_list .perfect {height: 100%; max-height: 18px; min-height: 16px; font-size: 14px; color: var(--Color-red-EC); font-weight: var(--Font-w700); text-transform: uppercase; text-align: right; }
+.card_list .item {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 0; margin-top: 4px; }
+.card_list span {width: 50%; font-size: 12px; color: var(--Color-dark-17); font-weight: var(--Font-w300); }
+.card_list .item .count {max-width: 42px; padding: 2px 8px; box-sizing: border-box; border-radius: var(--Border-raidus6); background-color: var(--Color-gray-f1); font-size: 12px; font-family: var(--Font-En); color: var(--Color-gray-68); font-weight: var(--Font-w300); text-align: center;}
+.card_list .item .count.answer {background-color: var(--Color-main); color: var(--Color-white); }
 
-/* 챌린지 리스트 */
+@container card_item (max-width: 330px) {
+  .card_list li {width: calc(50% - 15px);} 
+}
+@container card_item (max-width: 320px) {
+  .card_list .perfect {font-size: 12px; }
+}
+
+/* 챌린지 뷰 */
 .result_list {margin-top: 40px; }
 .result_list li + li {margin-top: 30px; padding-top: 15px; border-top: 1px dashed var(--Color-gray-f1);  }
 .result_list li > div {display: grid; grid-template-columns: repeat(3, 1fr); justify-items: stretch; align-items: center; }
@@ -489,7 +517,7 @@ find pw
 .ploating.show {position: fixed; top: 0; left: 50%; transform: translateX(-50%); }
 .ploating_ab {position: absolute; bottom: 30px; left: 0; z-index: 120; width: 100%; }
 .backdrop {display: none; position: absolute; top: 0; left: 0; z-index: 110; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); }
-.ploating_more {width: 50px; height: 50px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); box-shadow: 1px 3px 7px 2px #fa7d3878;}
+.ploating_more {width: 50px; height: 50px; box-sizing: border-box; border-radius: 100%; background-color: var(--Color-main); box-shadow: 1px 3px 7px 2px #fa7d3878; background-image: url('/html/assets/plus.svg'); background-repeat: no-repeat; background-size: 18px 18px; background-position: left 16px center; }
 
 .ploating_list {display: flex; flex-wrap: wrap; gap: 10px 0; padding: 0 20px;}
 .ploating_list.hide {display:none; }
@@ -508,8 +536,46 @@ find pw
 .ploating.show .backdrop {display: block; }
 
 
+/* ==============================
+  exam
+================================= */
+.word_antenna {display: flex; flex-wrap: wrap; justify-content: space-between; padding: 0 16px; }
+.word_antenna li {display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; margin-bottom: 4px; }
+.word_antenna li span {font-size: 14px; color: var(--Color-dark-17); }
+.word_antenna li .count {display: inline-block; width: 67px; padding: 5px 11px; box-sizing: border-box; border-radius: var(--Border-raidus5); background-color: var(--Color-main); font-size: 14px; color: var(--Color-white);}
+
+.word_card {padding: 40px 20px 20px; box-sizing: border-box; border-radius: var(--Border-radius20); box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, -4px -3px 4px 0px rgba(0, 0, 0, 0.25) inset; text-align: center; }
+.word_card > a {display: block; width: 100%; }
+.word_card span {margin-bottom: 8px; display: block; font-size: 12px; color: var(--Color-gray-68); }
+.word_card strong {display: block; font-size: 32px; color: var(--Color-dark-17); font-weight: var(--Font-w700); font-family: var(--Font-En);}
+.word_card button {display: block; width: 100%; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--Color-gray-e2); text-align: left; font-size: 12px; color: var(--Color-gray-68);}
+.word_card button i {display: inline-block; width: 40px; height: 40px; margin-right: 8px; border-radius: 100%; box-sizing: border-box; background-color: var(--Color-gray-f2); background-image: url("/html/assets/volume.svg"); background-repeat: no-repeat; background-position: center; background-size: 24px 24px; vertical-align: middle;}
+
+.wrtie_form {margin-top: 72px; }
+.shown_guide {display: block; width: 100%; font-size: 14px; color: var(--Color-gray-68); text-align: center; }
+.word_input {width: 100%; text-align: center; background-color: red; }
+
+
+.button_group.fixed {position: sticky; bottom: 0; left: 0; width: 100%; }
+
+.button_group.row {display: flex; flex-wrap: wrap; justify-content: space-between; }
+.button_group .btn.purple {width: 100px; border-radius: var(--Border-radius20); background-color: rgba(101, 88, 245, 0.35);  line-height: 38px; }
+.button_group .btn.purple .btn_txt {font-size: 16px; font-family: var(--Font-Kr); color: var(--Color-white); }
+.button_group .btn.purple.deep {background-color: var(--Color-purple-65);}
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 425px) {
   #wrapper ,
 .ploating  {max-width: 375px; }
 }
+
+
