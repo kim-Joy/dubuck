@@ -11,8 +11,7 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
@@ -255,4 +254,4 @@
 }
 .confirm.exam_exit > .modal_cont > .modal_body .txt > u {
   text-decoration: underline;
-}/*# sourceMappingURL=layout.css.map */
+}

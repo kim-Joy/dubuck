@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* =====================================
+  FONT 
+======================================*/
+/* fmaily */
+/* size */
+/* weight */
+/* =====================================
+  COLOR PALETTE
+======================================*/
+/* =====================================
+  STYLE
+======================================*/
+/* BORDER */
+/* SIZE */
+/* =====================================
+  IMAGE
+======================================*/
+/* =====================================
+  LAYOUT
+======================================*/
+/* display: grid & flex 컨테이너 */
+/* =====================================
+  IMAGE 
+======================================*/
+.button_group {
+  margin-top: 40px;
+}
+.button_group .btn + .btn {
+  margin-top: 8px;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+  /* color */
+  /* size */
+}
+.btn.bg_fill {
+  background-color: #FA7D38;
+}
+.btn.bg_fill i {
+  background-color: #FFFFFF;
+}
+.btn.bg_fill .btn_txt {
+  color: #FFFFFF;
+}
+.btn.border_fill {
+  border: 1px solid #FA7D38;
+}
+.btn.border_fill i {
+  background-color: #FA7D38;
+}
+.btn.border_fill .btn_txt {
+  color: #FA7D38;
+}
+.btn.h40 {
+  height: var(--h40);
+  box-sizing: border-box;
+  border-radius: var(--Border-radius20);
+  font-size: 18px;
+  line-height: 38px;
+}
+.btn.h50 {
+  height: var(--h50);
+  box-sizing: border-box;
+  border-radius: var(--Border-radius20);
+  font-size: 18px;
+  line-height: 48px;
+}
+.btn.h60 {
+  height: var(--h60);
+  box-sizing: border-box;
+  border-radius: var(--Border-radius20);
+  font-size: 18px;
+  line-height: 58px;
+}
+
+.btn_txt {
+  display: block;
+  text-align: center;
+}
+.btn_txt .bold {
+  font-weight: 700;
+}
+.btn_txt.font18 {
+  font-size: 18px;
+}
+.btn_txt.font14 {
+  font-size: 14px;
+}

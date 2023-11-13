@@ -1,0 +1,183 @@
+@import "vars.scss";
+@import "util_vars.scss";
+
+
+/* =====================================
+  intro banner
+======================================*/
+.big_banner {
+  position: relative; 
+  padding: 60px 40px 120px 60px; box-sizing: border-box; 
+  border-top-left-radius: $Border-radius80; 
+  border-top-right-radius: $Border-radius80; 
+  border-bottom-left-radius: $Border-radius80; 
+  background-color: $Color-main;
+
+  .logo {
+    display: block;
+    width: 50px; height: 26px; 
+    @include image(
+      $url: url(/html/assets/logo.svg),
+      $size: contain,
+      $position: center center,
+    );
+  }
+
+  h2 {
+    color: $Color-dark-17; 
+    font: {
+      size: $Font-size40; 
+      weight: $Font-w700; 
+    }
+  }
+
+  p {
+    margin-top: 8px; 
+    color: $Color-dark-17; 
+    font: {
+      size: $Font-size16;
+    }
+    line-height: 1.3;
+  }
+
+  img {
+    @include position($b: -54px, $l: 47px);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+  main itmems
+======================================*/
+.calendar {
+  position: relative; 
+  @include system_cont(
+    flex,
+    $wrap: wrap,
+    $justify_con: flex-end
+  );
+  margin-top: -80px; 
+  container: category_item / inline-size;
+  
+  .box {
+    display: block; 
+    max-width: 160px; width: 100%; 
+    max-height: 160px; 
+    padding: 50px 20px 0; box-sizing: border-box; 
+    border-radius: $Border-radius20;
+    background-color: $Color-dark-24; 
+    aspect-ratio: 1/1;
+    
+    p {
+      color: $Color-white;
+      font: {
+        size: 14px; 
+      }
+    }
+    .count {
+      display:block; 
+      margin-top: 15px; 
+      font: {
+        size: 32px;
+        weight: $Font-w700;
+      }
+      color: $Color-white;
+    }
+  }
+
+  &:before {
+    content: ''; 
+    display: block; 
+    @include position($t: -14px, $r: 0, $index: 1);
+    width: 160px; height: 40px; 
+    @include image(
+      $url : url(/html/assets/calendar_hd.svg),
+      $size: 100% auto,
+      $position : top left 
+    );
+  }
+}
+
+@container category_item (max-width: 325px) {
+  .calendar {
+    .box {
+      width: calc(50% - 8px);
+    }
+  }
+  
+  .category {
+    li{ 
+      width: calc(50% - 8px);
+    }; 
+  }
+}
+@container category_item (max-width: 302px) {
+  .calendar {
+    p {
+      font-size: 12px;
+    }
+    .count {
+      font-size: 24px;
+    }
+  }
+   
+  .category{
+    li{
+      font-size: 24px;
+    }
+  }; 
+}
+
+
+.category {
+  @include system_cont(
+    flex,
+    $wrap: wrap,
+    $justify_con: space-between,
+    $gap: 16px 8px
+  );
+  margin-top: 16px; 
+  container: category_item / inline-size; 
+    li {
+      max-width: 160px; width: 100%; 
+      max-height: 160px; 
+      padding: 30px 20px; box-sizing: border-box;
+      border-radius: $Border-radius20; 
+      @include image($size: 24px 24px, $position: bottom 30px left 20px);
+      font: {
+        size: 32px;
+        weight: $Font-w700;
+       }
+       color: $Color-white; 
+       text-align: right; text-wrap: wrap; 
+       line-height: 1.2; word-break: keep-all;
+      aspect-ratio: 1/1; 
+      &:nth-child(even) {
+        @include image($position: bottom 30px right 20px);
+        text-align: left; 
+      }
+      > a {
+        display: block; width: 100%; height: 100%;
+      }
+      &.word {
+        background-color: $Color-purple-61;
+        @include image($url: '/html/assets/book.svg');     
+      }
+      &.exam {
+        background-color: $Color-main;
+        @include image($url: '/html/assets/exam.svg');     
+      }
+      &.result {
+        background-color: $Color-red-f6;
+        @include image($url: '/html/assets/flag.svg');     
+      }
+    }
+  
+}

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* =====================================
+  FONT 
+======================================*/
+/* fmaily */
+/* size */
+/* weight */
+/* =====================================
+  COLOR PALETTE
+======================================*/
+/* =====================================
+  STYLE
+======================================*/
+/* BORDER */
+/* SIZE */
+/* =====================================
+  IMAGE
+======================================*/
+/* =====================================
+  LAYOUT
+======================================*/
+/* display: grid & flex 컨테이너 */
+/* =====================================
+  IMAGE 
+======================================*/
+/* =====================================
+  common
+======================================*/
+.dialog {
+  margin: auto;
+  border: 0;
+  background-color: transparent;
+  padding: 8px 0;
+  overflow: hidden;
+}
+.dialog .dialog_wrap {
+  position: relative;
+  width: 100%;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+.dialog .dialog_wrap .dialog_header {
+  position: relative;
+}
+.dialog .dialog_wrap .dialog_header h2 {
+  padding-top: 15px;
+  color: #171717;
+  font-size: 18px;
+  font-weight: 700;
+}
+.dialog .dialog_wrap .dialog_header .dialog_close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #171717;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 10px 10px;
+  mask-size: 10px 10px;
+}
+.dialog .dialog_wrap .dialog_body {
+  padding-top: 40px;
+  text-align: center;
+}
+.dialog .dialog_wrap .dialog_foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0 8px;
+  margin-top: 50px;
+}
+.dialog .dialog_wrap .dialog_foot .btn {
+  min-width: 140px;
+  border-radius: 20px;
+}
+.dialog .dialog_wrap .dialog_foot .btn.h40 {
+  height: 40px;
+}
+.dialog .dialog_wrap .dialog_foot .btn.h40 > .btn_txt {
+  font-size: 14px;
+}
+.dialog .dialog_wrap .dialog_foot .btn + .btn {
+  background-color: #F1F1F1;
+}
+.dialog .dialog_wrap .dialog_foot .btn + .btn .btn_txt {
+  color: #686868;
+}
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confrim .dialog_header {
+  height: 50px;
+}
+
+/* =====================================
+  modal
+======================================*/
+.modal .dialog_wrap {
+  border-radius: 20px;
+  background-color: #3F34C0;
+}
+.modal .dialog_wrap .dialog_body h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: left;
+  line-height: 26px;
+}
+.modal .dialog_wrap .dialog_body p {
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: left;
+}
+.modal .dialog_wrap .dialog_body p + p {
+  margin-top: 25px;
+}
+.modal .dialog_wrap .dialog_foot {
+  margin-top: 32px;
+}
+.modal .dialog_wrap .dialog_foot .btn + .btn {
+  background-color: #FFFFFF;
+}
+.modal .dialog_wrap .dialog_foot .btn.border_fill {
+  border-color: #FFFFFF;
+}
+.modal .dialog_wrap .dialog_foot .btn.border_fill .btn_txt {
+  color: #FFFFFF;
+}
+.modal .dialog_wrap .dialog_foot .btn.bg_fill .btn_txt {
+  color: #3F34C0;
+}
+.modal .dialog_wrap .dialog_foot .btn .btn_txt {
+  font-size: 14px;
+}
+
+/* =====================================
+  tutotials
+======================================*/
+.tutotials .dialog_wrap {
+  border-radius: 20px;
+}
+.tutotials .dialog_wrap .dialog_header h2 {
+  padding-top: 20px;
+}
+.tutotials .dialog_wrap .dialog_header .dialog_close {
+  top: 15px;
+}
+.tutotials .dialog_wrap .dialog_body {
+  padding-top: 8px;
+}
+.tutotials .dialog_wrap .dialog_body p {
+  text-align: left;
+  font-size: 12px;
+  color: #8A8A8A;
+  line-height: 1.5;
+}
+.tutotials .dialog_wrap .dialog_foot {
+  margin-top: 24px;
+  justify-content: flex-end;
+}
+.tutotials .dialog_wrap .dialog_foot .btn.bg_fill {
+  min-width: 70px;
+  height: 30px;
+  background-color: #6558F5;
+}
+.tutotials .dialog_wrap .dialog_foot .btn .btn_txt {
+  color: #FFFFFF;
+  font-size: 12px;
+}
+.tutotials .icon_direction {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #FFFFFF;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+.tutotials .icon_direction.top {
+  position: absolute;
+  top: 0;
+}
+.tutotials .icon_direction.bottom {
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-180deg);
+}
+.tutotials .icon_direction.left {
+  position: absolute;
+  left: 65px;
+}
+.tutotials .icon_direction.right {
+  position: absolute;
+  right: 56px;
+}

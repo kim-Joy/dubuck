@@ -11,8 +11,7 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
@@ -226,12 +225,3 @@
   font-weight: 300;
   font-family: "KIMM";
 }
-
-.absolute_item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 160px;
-  height: 160px;
-  background-color: red;
-}/*# sourceMappingURL=item.css.map */

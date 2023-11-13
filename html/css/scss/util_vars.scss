@@ -1,0 +1,81 @@
+/* =====================================
+  LAYOUT
+======================================*/ 
+@mixin inner($r, $l,){
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  padding-right: $r;
+  padding-left: $l;
+
+}
+
+@mixin position(
+  $p: absolute, 
+  $t: null, 
+  $b: null, 
+  $l: null,
+  $r: null,
+  $index: null
+){
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  z-index: $index;
+}
+
+/* display: grid & flex 컨테이너 */
+@mixin system_cont(
+  $dis : grid,
+  $wrap : null,
+  $align_con : null,
+  $justify_con : null,
+  $align_items : null,
+  $justify_items : null,
+  $gap: null
+){ 
+  display: $dis;
+  flex-wrap: $wrap;
+  align-content: $align_con;
+  justify-content: $justify_con;
+  align-items: $align_items;
+  justify-items: $justify_items;
+  gap: $gap;
+}
+
+@mixin system_item(
+  $align_self : start,
+  $justify_self : stretch
+){
+  align-self: $align_self;
+  justify-self: $justify_self;
+}
+
+
+/* =====================================
+  IMAGE 
+======================================*/ 
+@mixin image($url :null, $position: center center, $size : contain) {
+  background-image: $url;
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat; 
+}
+@mixin mask (
+  $webkit_mask_url:null, 
+  $mask_url:null, 
+  $webkit_mask_position: center,
+  $mask_position: center, 
+  $webkit_mask_size: contain, 
+  $mask_size: contain
+  ){
+  -webkit-mask-image: $webkit_mask_url; 
+  mask-image: $mask_url; 
+  -webkit-mask-repeat: no-repeat; 
+  mask-repeat: no-repeat; 
+  -webkit-mask-position: $webkit_mask_position; 
+  mask-position: $mask_position; 
+  -webkit-mask-size: $webkit_mask_size; 
+  mask-size: $mask_size;
+}

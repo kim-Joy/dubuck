@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/* =====================================
+  FONT 
+======================================*/
+/* fmaily */
+/* size */
+/* weight */
+/* =====================================
+  COLOR PALETTE
+======================================*/
+/* =====================================
+  STYLE
+======================================*/
+/* BORDER */
+/* SIZE */
+/* =====================================
+  IMAGE
+======================================*/
+/* =====================================
+  LAYOUT
+======================================*/
+/* display: grid & flex 컨테이너 */
+/* =====================================
+  IMAGE 
+======================================*/
+.policy_cont {
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* style */
+}
+.policy_cont .chapter {
+  counter-reset: period;
+}
+.policy_cont .chapter li {
+  counter-increment: period;
+  font-size: 14px;
+  color: #FA7D38;
+}
+.policy_cont .chapter li:before {
+  content: "제 " counter(period) "장";
+  margin-right: 5px;
+  font-size: 14px;
+  color: #FA7D38;
+}
+.policy_cont .article {
+  counter-reset: period;
+}
+.policy_cont .article li {
+  counter-increment: period;
+}
+.policy_cont .article li:before {
+  content: "제 " counter(period) " 조";
+  font-size: 12px;
+  color: #686868;
+  font-weight: 700;
+}
+.policy_cont .clear {
+  counter-reset: none !important;
+}
+.policy_cont .clear:before {
+  content: "" !important;
+  margin: 0 !important;
+}
+.policy_cont .policy_category li {
+  margin-bottom: 40px;
+}
+.policy_cont .depth_category li {
+  margin-top: 24px;
+  color: #686868;
+  font-size: 12px;
+  font-weight: 700;
+}
+.policy_cont .depth_category li p {
+  margin-top: 4px;
+  color: #686868;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.policy_cont + .button_group {
+  margin-top: 0;
+  padding-top: 20px;
+}

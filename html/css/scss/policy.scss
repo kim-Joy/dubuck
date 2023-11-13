@@ -1,0 +1,71 @@
+@import "vars.scss";
+@import "util_vars.scss";
+
+
+.policy_cont {
+  height: calc(100vh - 160px); 
+  overflow-y: auto; 
+  overflow-x: hidden;
+
+  .chapter {
+    counter-reset: period;
+    li {
+      counter-increment: period;
+      font-size: $Font-size14; 
+      color: $Color-main;
+      &:before {
+        content: "제 " counter(period)"장"; 
+        margin-right: 5px;
+       font-size: $Font-size14; 
+       color: $Color-main;
+      }
+    }
+   }
+  .article {
+    counter-reset: period; 
+    li {
+      counter-increment: period; 
+      &:before {
+        content: "제 " counter(period)" 조";
+        font-size: $Font-size12; 
+        color: $Color-gray-68; 
+        font-weight: $Font-w700;
+      }
+    }
+  }
+  .clear  {
+    counter-reset: none !important; 
+    &:before {
+      content: "" !important; 
+      margin: 0 !important; 
+    }
+  }
+
+  /* style */
+  .policy_category {
+    li {
+      margin-bottom: 40px; 
+    }
+  }
+  .depth_category {
+    li {
+      margin-top: 24px;
+      color: $Color-gray-68; 
+      font-size: $Font-size12; 
+      font-weight: $Font-w700;
+
+      p {
+        margin-top: 4px; 
+        color: $Color-gray-68; 
+        font-size: $Font-size10; 
+        line-height: 1.5; 
+        font-weight: $Font-w300;
+      }
+    }
+  }
+
+  + .button_group {
+    margin-top: 0; padding-top: 20px; 
+  } 
+}
+

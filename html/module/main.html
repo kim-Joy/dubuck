@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/html/css/scss/config.css">
+  <title>Document</title>
+</head>
+<body id="root">
+  <button type="button" class="dialog_open">열기</button>
+  <dialog class="dialog tutotials">
+    <form method="dialog">
+      <div class="dialog_wrap">
+        <div class="dialog_header">
+          <h2>두벅이와 함께</h2>
+          <button type="button" class="dialog_close x"><span class="visuallyhidden">닫기</span></button>
+        </div>
+        <div class="dialog_body">
+          <p>
+            출결관리를 통해 이달에 두벅이와 공부를 몇번 했는지 알 수 있습니다.
+          </p>
+        </div>
+        <div class="dialog_foot">
+          <button type="button" class="btn bg_fill">
+            <span class="btn_txt">다음</span>
+          </button>
+        </div>
+      </div>
+      <i class="icon_direction bottom right"><span class="visuallyhidden">화살표</span></i>
+    </form>
+  </dialog>
+</body>
+</html>
+
+<script>
+const dialog = document.querySelector('.dialog'); 
+const openDialog = document.querySelector('.dialog_open');
+const closeDialog = document.querySelector('.dialog_close');
+
+openDialog.addEventListener('click', () => {
+  dialog.showModal();
+});
+
+closeDialog.addEventListener('click', () => {
+  dialog.close();
+})
+
+dialog.addEventListener('click', () => {
+  console.log(dialog.returnValue);
+});
+;
+
+</script>

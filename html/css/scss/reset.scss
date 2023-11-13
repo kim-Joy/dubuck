@@ -13,11 +13,12 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video ,textarea, pre {margin: 0; padding: 0; border: 0; }
 
 ul,ol {list-style: none; }
-button, input {all: unset; cursor: pointer; outline: none;}
+button {all: unset; cursor: pointer; }
 a {text-decoration:none; color: inherit; cursor: pointer;}
 em {font-style: normal; }
-
 table {border-collapse: collapse; border-spacing: 0; }
+textarea, pre {}
 
-.visuallyhidden {position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; white-space: nowrap; -webkit-clip-path: inset(100%); clip-path: inset(100%); clip: rect(0, 0, 0, 0); overflow: hidden;
-}
+
+
+.uppercase {text-transform: uppercase; }

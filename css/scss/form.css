@@ -11,8 +11,7 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
@@ -57,11 +56,6 @@
 ================================ */
 /* input
 ================================ */
-input::-moz-placeholder {
-  font-family: "NanumSquare";
-  color: #8A8A8A !important;
-  opacity: 1;
-}
 input::placeholder {
   font-family: "NanumSquare";
   color: #8A8A8A !important;
@@ -70,18 +64,10 @@ input::placeholder {
 input:-webkit-input-placeholder, input:-ms-input-placeholder, input:-mos-input-placeholder {
   color: #8A8A8A;
 }
-input:-moz-read-only {
-  background-color: #f1f1f1 !important;
-  color: #686868 !important;
-  outline: none;
-}
 input:read-only, input.readonly, input:disabled, input.disabled {
   background-color: #f1f1f1 !important;
   color: #686868 !important;
   outline: none;
-}
-input:-moz-placeholder-shown {
-  text-overflow: ellipsis;
 }
 input:placeholder-shown {
   text-overflow: ellipsis;
@@ -89,10 +75,6 @@ input:placeholder-shown {
 
 input[type=password] {
   font-family: "Roboto", Helvetica, Arial, sans-serif !important;
-}
-
-input[type=password]::-moz-placeholder {
-  font-family: "KIMM";
 }
 
 input[type=password]::placeholder {
@@ -152,9 +134,6 @@ input[type=password]::placeholder {
 
 .form_email .form_input {
   font-family: "SpaceGrotesk";
-}
-.form_email .form_input::-moz-placeholder {
-  font-family: "KIMM";
 }
 .form_email .form_input::placeholder {
   font-family: "KIMM";
@@ -249,9 +228,6 @@ input[type=password]::placeholder {
   text-transform: uppercase;
   font-family: "SpaceGrotesk";
 }
-.security_group > .form_input::-moz-placeholder {
-  font-family: "KIMM";
-}
 .security_group > .form_input::placeholder {
   font-family: "KIMM";
 }
@@ -306,12 +282,9 @@ input[type=password]::placeholder {
 .textarea:hover {
   border-color: #FA7D38;
 }
-.textarea::-moz-placeholder {
-  color: #8a8a8a;
-}
 .textarea::placeholder {
   color: #8a8a8a;
 }
 
 /*  check box
-================================ *//*# sourceMappingURL=form.css.map */
+================================ */

@@ -1,0 +1,60 @@
+@import "vars.scss";
+@import "util_vars.scss";
+
+
+.button_group {
+  margin-top: 40px;
+  .btn + .btn {
+    margin-top: 8px; 
+  }
+
+}
+
+  
+.btn {
+  position: relative; 
+  display: block; 
+  padding: 0 20px; box-sizing: border-box;
+  text-align: center;
+
+  /* color */ 
+  &.bg_fill {
+    background-color: $Color-main;
+    i {
+      background-color: $Color-white;
+    }
+    .btn_txt {
+      color: $Color-white;
+    }
+  }
+  &.border_fill {
+    border: 1px solid $Color-main;
+    i {
+      background-color: $Color-main; 
+    }
+    .btn_txt {
+      color: $Color-main;
+    }
+  }
+
+  /* size */
+  &.h40 {height: var(--h40); box-sizing: border-box; border-radius: var(--Border-radius20); font-size: 18px; line-height: 38px;}
+  &.h50 {height: var(--h50); box-sizing: border-box; border-radius: var(--Border-radius20); font-size: 18px; line-height: 48px; }
+  &.h60 {height: var(--h60); box-sizing: border-box; border-radius: var(--Border-radius20); font-size: 18px; line-height: 58px;}
+  
+}
+
+
+.btn_txt {
+  display: block; 
+  text-align: center; 
+  .bold {
+    font-weight: $Font-w700; 
+  }
+  &.font18 {
+    font-size: $Font-size18;
+   }
+  &.font14 {
+    font-size: $Font-size14;
+  }
+}
